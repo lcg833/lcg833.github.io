@@ -96,7 +96,7 @@ WakeLock的一般使用方法如下：12345PowerManager pm = (PowerManager) getS
 WakeLock的一般使用方法如下：12345PowerManager pm = (PowerManager) getSystemService(Con">
 <meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/alignwakeup/wakelock.png">
 <meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/alignwakeup/miui_align_wakeup.png">
-<meta property="og:updated_time" content="2017-03-27T08:39:02.926Z">
+<meta property="og:updated_time" content="2017-03-27T08:41:25.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Alarm、WakeLock机制与对齐唤醒">
 <meta name="twitter:description" content="Android睡眠唤醒机制Android在标准linux内核原有睡眠唤醒模块基础上增加了WakeLock唤醒锁机制，WakeLock是Android提供给应用程序获取电力资源的唯一方法。只要还有地方在使用WakeLock，系统就不会进入休眠状态。
@@ -365,7 +365,8 @@ WakeLock的一般使用方法如下：12345PowerManager pm = (PowerManager) getS
 
 <h3 id="为什么要做对齐唤醒"><a href="#为什么要做对齐唤醒" class="headerlink" title="为什么要做对齐唤醒"></a>为什么要做对齐唤醒</h3><p>目前，在移动互联网的大浪潮下，基本上的APP都集成有消息推送功能，而不仅仅局限于即时通讯类应用。</p>
 <p>推送技术的解决方案主要有以下几类：</p>
-<p>1、<strong>轮询（pull方式）</strong>: 应用程序阶段性的与服务器进行连接并查询是否有新的消息到达<br>  由于客户端不知道服务器是否有新消息，只能通过定时向服务器询问，如果频率设定过高将消耗大量的宽带和电量，过低又导致消息延迟严重，该方案不适用于对消息有及时性需求的应用，一般不采用该方案。<br>2、<strong>SMS通知（push方式）</strong>: 通过拦截SMS消息并且解析消息内容来了解服务器的意图<br>  该方案可保证一定的实时性需求，但是需要向运营商缴纳相应的费用，所以该方案的使用也较少。<br>3、<strong>长连接（push方式）</strong>: 应用程序和服务器保持一个长连接，服务器的消息可以直接通过这个链接push到应用程序。<br>  能保证消息的实时性，并且不需要向运营商缴纳高额费用，所以基本上推送方案都是使用长连接来实现。<br><a id="more"></a>  </p>
+<p>1、<strong>轮询（pull方式）</strong>: 应用程序阶段性的与服务器进行连接并查询是否有新的消息到达<br>  由于客户端不知道服务器是否有新消息，只能通过定时向服务器询问，如果频率设定过高将消耗大量的宽带和电量，过低又导致消息延迟严重，该方案不适用于对消息有及时性需求的应用，一般不采用该方案。<br>2、<strong>SMS通知（push方式）</strong>: 通过拦截SMS消息并且解析消息内容来了解服务器的意图<br>  该方案可保证一定的实时性需求，但是需要向运营商缴纳相应的费用，所以该方案的使用也较少。<br>3、<strong>长连接（push方式）</strong>: 应用程序和服务器保持一个长连接，服务器的消息可以直接通过这个链接push到应用程序。<br>  能保证消息的实时性，并且不需要向运营商缴纳高额费用，所以基本上推送方案都是使用长连接来实现。  </p>
+<a id="more"></a>  
 <h3 id="长连接、NAT超时和心跳"><a href="#长连接、NAT超时和心跳" class="headerlink" title="长连接、NAT超时和心跳"></a>长连接、NAT超时和心跳</h3><p><strong>长连接</strong>：客户端与服务器建立连接之后, 不主动断开. 双方互相发送数据, 发完了也不主动断开连接, 之后有需要发送的数据就继续通过这个连接发送.  </p>
 <p><strong>NAT超时</strong>：因为IPv4的IP量有限，运营商分配给手机终端的IP是运营商内网的IP，手机要连接Internet，就需要通过运营商的网关做一个网络地址转换(Network Address Translation，NAT)。<br>简单的说运营商的网关需要维护一个外网IP、端口到内网IP、端口的对应关系，以确保内网的手机可以跟 Internet 的服务器通讯。<br>大部分移动无线网络运营商都在链路一段时间没有数据通讯时，会淘汰 NAT 表中的对应项，造成链路中断。</p>
 <p>下表列出一些已测试过的网络的NAT超时时间（内容来源与网络）：</p>
