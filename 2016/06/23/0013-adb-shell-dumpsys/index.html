@@ -1,0 +1,1024 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android Debug," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="编程之旅" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="查看dump服务通过命令1adb shell dumpsys -l
+可查看该机器支持的所有dump服务：
+（以nexus 5 Android 6.0为例）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dumpsys命令">
+<meta property="og:url" content="http://codingtrip.com/2016/06/23/0013-adb-shell-dumpsys/index.html">
+<meta property="og:site_name" content="编程之旅">
+<meta property="og:description" content="查看dump服务通过命令1adb shell dumpsys -l
+可查看该机器支持的所有dump服务：
+（以nexus 5 Android 6.0为例）">
+<meta property="og:updated_time" content="2016-11-29T01:40:48.165Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dumpsys命令">
+<meta name="twitter:description" content="查看dump服务通过命令1adb shell dumpsys -l
+可查看该机器支持的所有dump服务：
+（以nexus 5 Android 6.0为例）">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 468,
+      author: 'TalentLo'
+    }
+  };
+</script>
+
+  <title> dumpsys命令 | 编程之旅 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?24d3bbe408a7a352fbd5d4feb9129d8e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">编程之旅</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">——只为记录曾经走过的路</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                dumpsys命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-23T15:59:53+08:00" content="2016-06-23">
+              2016-06-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/23/0013-adb-shell-dumpsys/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/23/0013-adb-shell-dumpsys/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/23/0013-adb-shell-dumpsys/" class="leancloud_visitors" data-flag-title="dumpsys命令">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="查看dump服务"><a href="#查看dump服务" class="headerlink" title="查看dump服务"></a>查看dump服务</h3><p>通过命令<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb <span class="keyword">shell</span> dumpsys -<span class="keyword">l</span></span><br></pre></td></tr></table></figure></p>
+<p>可查看该机器支持的所有dump服务：</p>
+<p>（以nexus 5 Android 6.0为例）</p>
+<a id="more"></a>  
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">lcg@ubuntu:~$ adb shell dumpsys -l</span><br><span class="line">Currently running services:</span><br><span class="line">  DockObserver</span><br><span class="line">  SurfaceFlinger</span><br><span class="line">  accessibility</span><br><span class="line">  account</span><br><span class="line">  activity</span><br><span class="line">  alarm</span><br><span class="line">  android<span class="class">.security</span><span class="class">.keystore</span></span><br><span class="line">  appops</span><br><span class="line">  appwidget</span><br><span class="line">  assetatlas</span><br><span class="line">  <span class="tag">audio</span></span><br><span class="line">  backup</span><br><span class="line">  batterymanager</span><br><span class="line">  batteryproperties</span><br><span class="line">  batterystats</span><br><span class="line">  bluetooth_manager</span><br><span class="line">  carrier_config</span><br><span class="line">  clipboard</span><br><span class="line">  cmappsuggest</span><br><span class="line">  cmaudio</span><br><span class="line">  cmhardware</span><br><span class="line">  cmiconcache</span><br><span class="line">  cmlivedisplay</span><br><span class="line">  cmlivelockscreen</span><br><span class="line">  cmpartnerinterface</span><br><span class="line">  cmperformance</span><br><span class="line">  cmstatusbar</span><br><span class="line">  cmtelephonymanager</span><br><span class="line">  cmthemes</span><br><span class="line">  cmweather</span><br><span class="line">  commontime_management</span><br><span class="line">  connectivity</span><br><span class="line">  consumer_ir</span><br><span class="line">  <span class="attribute">content</span></span><br><span class="line">  country_detector</span><br><span class="line">  cpuinfo</span><br><span class="line">  dbinfo</span><br><span class="line">  device_policy</span><br><span class="line">  deviceidle</span><br><span class="line">  devicestoragemonitor</span><br><span class="line">  diskstats</span><br><span class="line">  <span class="attribute">display</span></span><br><span class="line">  <span class="attribute">display</span><span class="class">.qservice</span></span><br><span class="line">  dreams</span><br><span class="line">  drm<span class="class">.drmManager</span></span><br><span class="line">  dropbox</span><br><span class="line">  ethernet</span><br><span class="line">  fingerprint</span><br><span class="line">  gfxinfo</span><br><span class="line">  graphicsstats</span><br><span class="line">  imms</span><br><span class="line">  <span class="tag">input</span></span><br><span class="line">  input_method</span><br><span class="line">  iphonesubinfo</span><br><span class="line">  isms</span><br><span class="line">  isub</span><br><span class="line">  jobscheduler</span><br><span class="line">  launcherapps</span><br><span class="line">  location</span><br><span class="line">  lock_settings</span><br><span class="line">  media<span class="class">.audio_flinger</span></span><br><span class="line">  media<span class="class">.audio_policy</span></span><br><span class="line">  media<span class="class">.camera</span></span><br><span class="line">  media<span class="class">.camera</span><span class="class">.proxy</span></span><br><span class="line">  media<span class="class">.player</span></span><br><span class="line">  media<span class="class">.radio</span></span><br><span class="line">  media<span class="class">.resource_manager</span></span><br><span class="line">  media<span class="class">.sound_trigger_hw</span></span><br><span class="line">  media_projection</span><br><span class="line">  media_router</span><br><span class="line">  media_session</span><br><span class="line">  meminfo</span><br><span class="line">  midi</span><br><span class="line">  mount</span><br><span class="line">  netpolicy</span><br><span class="line">  netstats</span><br><span class="line">  network_management</span><br><span class="line">  network_score</span><br><span class="line">  nfc</span><br><span class="line">  notification</span><br><span class="line">  package</span><br><span class="line">  permission</span><br><span class="line">  phone</span><br><span class="line">  power</span><br><span class="line">  print</span><br><span class="line">  processinfo</span><br><span class="line">  procstats</span><br><span class="line">  profile</span><br><span class="line">  restrictions</span><br><span class="line">  rttmanager</span><br><span class="line">  samplingprofiler</span><br><span class="line">  scheduling_policy</span><br><span class="line">  search</span><br><span class="line">  sensorservice</span><br><span class="line">  serial</span><br><span class="line">  servicediscovery</span><br><span class="line">  simphonebook</span><br><span class="line">  sip</span><br><span class="line">  statusbar</span><br><span class="line">  telecom</span><br><span class="line">  telephony<span class="class">.registry</span></span><br><span class="line">  textservices</span><br><span class="line">  trust</span><br><span class="line">  uimode</span><br><span class="line">  updatelock</span><br><span class="line">  usagestats</span><br><span class="line">  usb</span><br><span class="line">  user</span><br><span class="line">  vibrator</span><br><span class="line">  voiceinteraction</span><br><span class="line">  wallpaper</span><br><span class="line">  webviewupdate</span><br><span class="line">  wifi</span><br><span class="line">  wifip2p</span><br><span class="line">  wifiscanner</span><br><span class="line">  window</span><br></pre></td></tr></table></figure>
+<p>通过命令<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service <span class="type">list</span></span><br></pre></td></tr></table></figure></p>
+<p>可进一步了解以上服务名具体对应的服务：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">shell@M1000:/ $ service list                                                   </span><br><span class="line">Found <span class="number">126</span> services:</span><br><span class="line"><span class="number">0</span>	GpuAppSpectatorService: [com<span class="class">.mediatek</span><span class="class">.GpuAppSpectatorService</span>]</span><br><span class="line"><span class="number">1</span>	sip: [android<span class="class">.net</span><span class="class">.sip</span><span class="class">.ISipService</span>]</span><br><span class="line"><span class="number">2</span>	telecom: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telecom</span><span class="class">.ITelecomService</span>]</span><br><span class="line"><span class="number">3</span>	carrier_config: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.ICarrierConfigLoader</span>]</span><br><span class="line"><span class="number">4</span>	phoneEx: [com<span class="class">.mediatek</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.ITelephonyEx</span>]</span><br><span class="line"><span class="number">5</span>	phone: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.ITelephony</span>]</span><br><span class="line"><span class="number">6</span>	isms: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.ISms</span>]</span><br><span class="line"><span class="number">7</span>	iphonesubinfo: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.IPhoneSubInfo</span>]</span><br><span class="line"><span class="number">8</span>	simphonebook: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.IIccPhoneBook</span>]</span><br><span class="line"><span class="number">9</span>	isub: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.ISub</span>]</span><br><span class="line"><span class="number">10</span>	GbaService: [com<span class="class">.mediatek</span><span class="class">.gba</span><span class="class">.IGbaService</span>]</span><br><span class="line"><span class="number">11</span>	ims: [com<span class="class">.android</span><span class="class">.ims</span><span class="class">.internal</span><span class="class">.IImsService</span>]</span><br><span class="line"><span class="number">12</span>	vie_command: [com<span class="class">.mediatek</span><span class="class">.common</span><span class="class">.voiceextension</span><span class="class">.IVoiceExtCommandManager</span>]</span><br><span class="line"><span class="number">13</span>	imms: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.IMms</span>]</span><br><span class="line"><span class="number">14</span>	media_projection: [android<span class="class">.media</span><span class="class">.projection</span><span class="class">.IMediaProjectionManager</span>]</span><br><span class="line"><span class="number">15</span>	mtk-perfservice: [com<span class="class">.mediatek</span><span class="class">.perfservice</span><span class="class">.IPerfService</span>]</span><br><span class="line"><span class="number">16</span>	launcherapps: [android<span class="class">.content</span><span class="class">.pm</span><span class="class">.ILauncherApps</span>]</span><br><span class="line"><span class="number">17</span>	fingerprint: [android<span class="class">.hardware</span><span class="class">.fingerprint</span><span class="class">.IFingerprintService</span>]</span><br><span class="line"><span class="number">18</span>	trust: [android<span class="class">.app</span><span class="class">.trust</span><span class="class">.ITrustManager</span>]</span><br><span class="line"><span class="number">19</span>	media_router: [android<span class="class">.media</span><span class="class">.IMediaRouterService</span>]</span><br><span class="line"><span class="number">20</span>	media_session: [android<span class="class">.media</span><span class="class">.session</span><span class="class">.ISessionManager</span>]</span><br><span class="line"><span class="number">21</span>	restrictions: [android<span class="class">.content</span><span class="class">.IRestrictionsManager</span>]</span><br><span class="line"><span class="number">22</span>	print: [android<span class="class">.print</span><span class="class">.IPrintManager</span>]</span><br><span class="line"><span class="number">23</span>	graphicsstats: [android<span class="class">.view</span><span class="class">.IGraphicsStats</span>]</span><br><span class="line"><span class="number">24</span>	assetatlas: [android<span class="class">.view</span><span class="class">.IAssetAtlas</span>]</span><br><span class="line"><span class="number">25</span>	dreams: [android<span class="class">.service</span><span class="class">.dreams</span><span class="class">.IDreamManager</span>]</span><br><span class="line"><span class="number">26</span>	commontime_management: []</span><br><span class="line"><span class="number">27</span>	samplingprofiler: []</span><br><span class="line"><span class="number">28</span>	diskstats: []</span><br><span class="line"><span class="number">29</span>	voiceinteraction: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.app</span><span class="class">.IVoiceInteractionManagerService</span>]</span><br><span class="line"><span class="number">30</span>	appwidget: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.appwidget</span><span class="class">.IAppWidgetService</span>]</span><br><span class="line"><span class="number">31</span>	backup: [android<span class="class">.app</span><span class="class">.backup</span><span class="class">.IBackupManager</span>]</span><br><span class="line"><span class="number">32</span>	jobscheduler: [android<span class="class">.app</span><span class="class">.job</span><span class="class">.IJobScheduler</span>]</span><br><span class="line"><span class="number">33</span>	serial: [android<span class="class">.hardware</span><span class="class">.ISerialManager</span>]</span><br><span class="line"><span class="number">34</span>	usb: [android<span class="class">.hardware</span><span class="class">.usb</span><span class="class">.IUsbManager</span>]</span><br><span class="line"><span class="number">35</span>	DockObserver: []</span><br><span class="line"><span class="number">36</span>	audioprofile: [com<span class="class">.mediatek</span><span class="class">.common</span><span class="class">.audioprofile</span><span class="class">.IAudioProfileService</span>]</span><br><span class="line"><span class="number">37</span>	<span class="tag">audio</span>: [android<span class="class">.media</span><span class="class">.IAudioService</span>]</span><br><span class="line"><span class="number">38</span>	wallpaper: [android<span class="class">.app</span><span class="class">.IWallpaperManager</span>]</span><br><span class="line"><span class="number">39</span>	dropbox: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.os</span><span class="class">.IDropBoxManagerService</span>]</span><br><span class="line"><span class="number">40</span>	search_engine: [com<span class="class">.mediatek</span><span class="class">.search</span><span class="class">.ISearchEngineManagerService</span>]</span><br><span class="line"><span class="number">41</span>	search: [android<span class="class">.app</span><span class="class">.ISearchManager</span>]</span><br><span class="line"><span class="number">42</span>	country_detector: [android<span class="class">.location</span><span class="class">.ICountryDetector</span>]</span><br><span class="line"><span class="number">43</span>	location: [android<span class="class">.location</span><span class="class">.ILocationManager</span>]</span><br><span class="line"><span class="number">44</span>	devicestoragemonitor: []</span><br><span class="line"><span class="number">45</span>	notification: [android<span class="class">.app</span><span class="class">.INotificationManager</span>]</span><br><span class="line"><span class="number">46</span>	updatelock: [android<span class="class">.os</span><span class="class">.IUpdateLock</span>]</span><br><span class="line"><span class="number">47</span>	data_shaping: [com<span class="class">.mediatek</span><span class="class">.datashaping</span><span class="class">.IDataShapingManager</span>]</span><br><span class="line"><span class="number">48</span>	servicediscovery: [android<span class="class">.net</span><span class="class">.nsd</span><span class="class">.INsdManager</span>]</span><br><span class="line"><span class="number">49</span>	connectivity: [android<span class="class">.net</span><span class="class">.IConnectivityManager</span>]</span><br><span class="line"><span class="number">50</span>	ethernet: [android<span class="class">.net</span><span class="class">.IEthernetManager</span>]</span><br><span class="line"><span class="number">51</span>	rttmanager: [android<span class="class">.net</span><span class="class">.wifi</span><span class="class">.IRttManager</span>]</span><br><span class="line"><span class="number">52</span>	wifiscanner: [android<span class="class">.net</span><span class="class">.wifi</span><span class="class">.IWifiScanner</span>]</span><br><span class="line"><span class="number">53</span>	wifi: [android<span class="class">.net</span><span class="class">.wifi</span><span class="class">.IWifiManager</span>]</span><br><span class="line"><span class="number">54</span>	wifip2p: [android<span class="class">.net</span><span class="class">.wifi</span><span class="class">.p2p</span><span class="class">.IWifiP2pManager</span>]</span><br><span class="line"><span class="number">55</span>	netpolicy: [android<span class="class">.net</span><span class="class">.INetworkPolicyManager</span>]</span><br><span class="line"><span class="number">56</span>	netstats: [android<span class="class">.net</span><span class="class">.INetworkStatsService</span>]</span><br><span class="line"><span class="number">57</span>	network_score: [android<span class="class">.net</span><span class="class">.INetworkScoreService</span>]</span><br><span class="line"><span class="number">58</span>	textservices: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.textservice</span><span class="class">.ITextServicesManager</span>]</span><br><span class="line"><span class="number">59</span>	network_management: [android<span class="class">.os</span><span class="class">.INetworkManagementService</span>]</span><br><span class="line"><span class="number">60</span>	clipboard: [android<span class="class">.content</span><span class="class">.IClipboard</span>]</span><br><span class="line"><span class="number">61</span>	statusbar: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.statusbar</span><span class="class">.IStatusBarService</span>]</span><br><span class="line"><span class="number">62</span>	device_policy: [android<span class="class">.app</span><span class="class">.admin</span><span class="class">.IDevicePolicyManager</span>]</span><br><span class="line"><span class="number">63</span>	deviceidle: [android<span class="class">.os</span><span class="class">.IDeviceIdleController</span>]</span><br><span class="line"><span class="number">64</span>	persistent_data_block: [android<span class="class">.service</span><span class="class">.persistentdata</span><span class="class">.IPersistentDataBlockService</span>]</span><br><span class="line"><span class="number">65</span>	lock_settings: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.widget</span><span class="class">.ILockSettings</span>]</span><br><span class="line"><span class="number">66</span>	uimode: [android<span class="class">.app</span><span class="class">.IUiModeManager</span>]</span><br><span class="line"><span class="number">67</span>	mount: [IMountService]</span><br><span class="line"><span class="number">68</span>	accessibility: [android<span class="class">.view</span><span class="class">.accessibility</span><span class="class">.IAccessibilityManager</span>]</span><br><span class="line"><span class="number">69</span>	input_method: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.view</span><span class="class">.IInputMethodManager</span>]</span><br><span class="line"><span class="number">70</span>	bluetooth_manager: [android<span class="class">.bluetooth</span><span class="class">.IBluetoothManager</span>]</span><br><span class="line"><span class="number">71</span>	<span class="tag">input</span>: [android<span class="class">.hardware</span><span class="class">.input</span><span class="class">.IInputManager</span>]</span><br><span class="line"><span class="number">72</span>	window: [android<span class="class">.view</span><span class="class">.IWindowManager</span>]</span><br><span class="line"><span class="number">73</span>	alarm: [android<span class="class">.app</span><span class="class">.IAlarmManager</span>]</span><br><span class="line"><span class="number">74</span>	consumer_ir: [android<span class="class">.hardware</span><span class="class">.IConsumerIrService</span>]</span><br><span class="line"><span class="number">75</span>	vibrator: [android<span class="class">.os</span><span class="class">.IVibratorService</span>]</span><br><span class="line"><span class="number">76</span>	mobile: [com<span class="class">.mediatek</span><span class="class">.common</span><span class="class">.mom</span><span class="class">.IMobileManagerService</span>]</span><br><span class="line"><span class="number">77</span>	<span class="attribute">content</span>: [android<span class="class">.content</span><span class="class">.IContentService</span>]</span><br><span class="line"><span class="number">78</span>	account: [android<span class="class">.accounts</span><span class="class">.IAccountManager</span>]</span><br><span class="line"><span class="number">79</span>	media<span class="class">.camera</span><span class="class">.proxy</span>: [android<span class="class">.hardware</span><span class="class">.ICameraServiceProxy</span>]</span><br><span class="line"><span class="number">80</span>	telephony<span class="class">.registry</span>: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.telephony</span><span class="class">.ITelephonyRegistry</span>]</span><br><span class="line"><span class="number">81</span>	scheduling_policy: [android<span class="class">.os</span><span class="class">.ISchedulingPolicyService</span>]</span><br><span class="line"><span class="number">82</span>	webviewupdate: [android<span class="class">.webkit</span><span class="class">.IWebViewUpdateService</span>]</span><br><span class="line"><span class="number">83</span>	usagestats: [android<span class="class">.app</span><span class="class">.usage</span><span class="class">.IUsageStatsManager</span>]</span><br><span class="line"><span class="number">84</span>	battery: []</span><br><span class="line"><span class="number">85</span>	sensorservice: [android<span class="class">.gui</span><span class="class">.SensorServer</span>]</span><br><span class="line"><span class="number">86</span>	anrmanager: [android<span class="class">.app</span><span class="class">.IANRManager</span>]</span><br><span class="line"><span class="number">87</span>	processinfo: [android<span class="class">.os</span><span class="class">.IProcessInfoService</span>]</span><br><span class="line"><span class="number">88</span>	permission: [android<span class="class">.os</span><span class="class">.IPermissionController</span>]</span><br><span class="line"><span class="number">89</span>	cpuinfo: []</span><br><span class="line"><span class="number">90</span>	dbinfo: []</span><br><span class="line"><span class="number">91</span>	gfxinfo: []</span><br><span class="line"><span class="number">92</span>	meminfo: []</span><br><span class="line"><span class="number">93</span>	procstats: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.app</span><span class="class">.IProcessStats</span>]</span><br><span class="line"><span class="number">94</span>	activity: [android<span class="class">.app</span><span class="class">.IActivityManager</span>]</span><br><span class="line"><span class="number">95</span>	user: [android<span class="class">.os</span><span class="class">.IUserManager</span>]</span><br><span class="line"><span class="number">96</span>	package: [android<span class="class">.content</span><span class="class">.pm</span><span class="class">.IPackageManager</span>]</span><br><span class="line"><span class="number">97</span>	recovery: [com<span class="class">.mediatek</span><span class="class">.recovery</span><span class="class">.IRecoveryManagerService</span>]</span><br><span class="line"><span class="number">98</span>	<span class="attribute">display</span>: [android<span class="class">.hardware</span><span class="class">.display</span><span class="class">.IDisplayManager</span>]</span><br><span class="line"><span class="number">99</span>	power: [android<span class="class">.os</span><span class="class">.IPowerManager</span>]</span><br><span class="line"><span class="number">100</span>	appops: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.app</span><span class="class">.IAppOpsService</span>]</span><br><span class="line"><span class="number">101</span>	batterystats: [com<span class="class">.android</span><span class="class">.internal</span><span class="class">.app</span><span class="class">.IBatteryStats</span>]</span><br><span class="line"><span class="number">102</span>	media<span class="class">.mmsdk</span>: [com<span class="class">.mediatek</span><span class="class">.mmsdk</span><span class="class">.IMMSdkService</span>]</span><br><span class="line"><span class="number">103</span>	media<span class="class">.radio</span>: [android<span class="class">.hardware</span><span class="class">.IRadioService</span>]</span><br><span class="line"><span class="number">104</span>	media<span class="class">.sound_trigger_hw</span>: [android<span class="class">.hardware</span><span class="class">.ISoundTriggerHwService</span>]</span><br><span class="line"><span class="number">105</span>	media<span class="class">.audio_policy</span>: [android<span class="class">.media</span><span class="class">.IAudioPolicyService</span>]</span><br><span class="line"><span class="number">106</span>	media<span class="class">.camera</span>: [android<span class="class">.hardware</span><span class="class">.ICameraService</span>]</span><br><span class="line"><span class="number">107</span>	user<span class="class">.xposed</span><span class="class">.app</span>: [com<span class="class">.eebbk</span><span class="class">.studyos</span><span class="class">.alpaca</span><span class="class">.IXposedService</span>]</span><br><span class="line"><span class="number">108</span>	user<span class="class">.xposed</span><span class="class">.system</span>: [com<span class="class">.eebbk</span><span class="class">.studyos</span><span class="class">.alpaca</span><span class="class">.IXposedService</span>]</span><br><span class="line"><span class="number">109</span>	media<span class="class">.VTS</span>: [android<span class="class">.hardware</span><span class="class">.IVTService</span>]</span><br><span class="line"><span class="number">110</span>	SurfaceFlinger: [android<span class="class">.ui</span><span class="class">.ISurfaceComposer</span>]</span><br><span class="line"><span class="number">111</span>	drm<span class="class">.drmManager</span>: [drm.IDrmManagerService]</span><br><span class="line"><span class="number">112</span>	memory_dumper: [android<span class="class">.memory</span><span class="class">.IMemoryDumper</span>]</span><br><span class="line"><span class="number">113</span>	media<span class="class">.resource_manager</span>: [android<span class="class">.media</span><span class="class">.IResourceManagerService</span>]</span><br><span class="line"><span class="number">114</span>	media<span class="class">.player</span>: [android<span class="class">.media</span><span class="class">.IMediaPlayerService</span>]</span><br><span class="line"><span class="number">115</span>	media<span class="class">.audio_flinger</span>: [android<span class="class">.media</span><span class="class">.IAudioFlinger</span>]</span><br><span class="line"><span class="number">116</span>	program_binary: []</span><br><span class="line"><span class="number">117</span>	android<span class="class">.security</span><span class="class">.keystore</span>: [android<span class="class">.security</span><span class="class">.IKeystoreService</span>]</span><br><span class="line"><span class="number">118</span>	batteryproperties: [android<span class="class">.os</span><span class="class">.IBatteryPropertiesRegistrar</span>]</span><br><span class="line"><span class="number">119</span>	android<span class="class">.service</span><span class="class">.gatekeeper</span><span class="class">.IGateKeeperService</span>: []</span><br><span class="line"><span class="number">120</span>	GuiExtService: [GuiExtService]</span><br><span class="line"><span class="number">121</span>	DmAgent: []</span><br><span class="line"><span class="number">122</span>	PQ: [PQService]</span><br><span class="line"><span class="number">123</span>	mtk<span class="class">.codecservice</span>: []</span><br><span class="line"><span class="number">124</span>	PPLAgent: []</span><br><span class="line"><span class="number">125</span>	NvRAMAgent: [NvRAMAgent]</span><br></pre></td></tr></table></figure>
+<h3 id="dumpsys-activity"><a href="#dumpsys-activity" class="headerlink" title="dumpsys activity"></a>dumpsys activity</h3><p>通过命令<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">dumpsys</span> activity -h</span><br></pre></td></tr></table></figure></p>
+<p>可查看所有参数<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">shell@M1000:/ $ dumpsys activity -h                                            </span><br><span class="line">Activity manager dump options:</span><br><span class="line">  [-a] [-c] [-p package] [-h] [cmd] ...</span><br><span class="line">  cmd may be one of:</span><br><span class="line">    a[ctivities]: activity stack <span class="keyword">state</span> //activity 栈状态</span><br><span class="line">    r[recents]: recent activities <span class="keyword">state</span> //最近使用Activity状态</span><br><span class="line">    b[roadcasts] [PACKAGE_NAME] [history [-s]]: broadcast <span class="keyword">state</span> //广播状态</span><br><span class="line">    i[ntents] [PACKAGE_NAME]: pending intent <span class="keyword">state</span> // Pending intent状态</span><br><span class="line">    p[rocesses] [PACKAGE_NAME]: process <span class="keyword">state</span> //进程状态</span><br><span class="line">    o[om]: <span class="keyword">out</span> of memory management // OOM信息</span><br><span class="line">    perm[issions]: URI permission grant <span class="keyword">state</span> //授权状态</span><br><span class="line">    prov[iders] [COMP_SPEC ...]: content provider <span class="keyword">state</span> //ContentProvider状态</span><br><span class="line">    provider [COMP_SPEC]: provider client-side <span class="keyword">state</span> //ContentProvider(客户端)状态</span><br><span class="line">    s[ervices] [COMP_SPEC ...]: service <span class="keyword">state</span> //服务状态</span><br><span class="line">    as[sociations]: tracked app associations</span><br><span class="line">    service [COMP_SPEC]: service client-side <span class="keyword">state</span> //服务（客户端）状态</span><br><span class="line">    package [PACKAGE_NAME]: <span class="literal">all</span> <span class="keyword">state</span> related <span class="keyword">to</span> given package //所有与给予包名相关的状态</span><br><span class="line">    <span class="literal">all</span>: dump <span class="literal">all</span> activities //所有的activities信息</span><br><span class="line">    top: dump the top activity //栈顶activity信息</span><br><span class="line">    write: write <span class="literal">all</span> pending <span class="keyword">state</span> <span class="keyword">to</span> storage //状态持久化到存储</span><br><span class="line">    track-associations: enable association tracking //</span><br><span class="line">    untrack-associations: disable and clear association tracking</span><br><span class="line">  cmd may also be a COMP_SPEC <span class="keyword">to</span> dump activities.</span><br><span class="line">  COMP_SPEC may be a component name (com.foo/.myApp),</span><br><span class="line">    a partial substring <span class="keyword">in</span> a component name, a</span><br><span class="line">    hex object identifier.</span><br><span class="line">  -a: include <span class="literal">all</span> available server <span class="keyword">state</span>. //列出所有可用的服务状态</span><br><span class="line">  -c: include client <span class="keyword">state</span>. //列出客户端状态</span><br><span class="line">  -p: <span class="keyword">limit</span> output <span class="keyword">to</span> given package. //过滤，只显示该包名</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android-Debug/" rel="tag">#Android Debug</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/23/0012-adb-shell-am/" rel="next" title="am命令">
+                <i class="fa fa-chevron-left"></i> am命令
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/26/0014-mac-aosp/" rel="prev" title="在Mac OS中获取和编译android源码(AOSP)">
+                在Mac OS中获取和编译android源码(AOSP) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/23/0013-adb-shell-dumpsys/"
+           data-title="dumpsys命令" data-url="http://codingtrip.com/2016/06/23/0013-adb-shell-dumpsys/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/author.jpg"
+               alt="Talent Lo" />
+          <p class="site-author-name" itemprop="name">Talent Lo</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lcg833" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2392015411" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://axdroid.com/" title="Big Kong" target="_blank">Big Kong</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://pmdog.me/" title="Big Long" target="_blank">Big Long</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://fucktun.com/" title="Big Tun" target="_blank">Big Tun</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看dump服务"><span class="nav-number">1.</span> <span class="nav-text">查看dump服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dumpsys-activity"><span class="nav-number">2.</span> <span class="nav-text">dumpsys activity</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Talent Lo</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="records" itemprop="copyrightHolder">粤ICP备15071430号</span>
+
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"codingtrip"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("4dOx59DJqKNoccbcGIuztG09-gzGzoHsz", "FPxLkx1NjkayLNUrG6x1eCps");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
