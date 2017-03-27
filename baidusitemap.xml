@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://codingtrip.com/2016/05/18/0007_GitLab%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-03-27T08:43:52.634Z</lastmod>
+    <data>
+        <display>
+        <title>Gitlab 使用</title>
+        <pubTime>2016-05-18T11:07:10.000Z</pubTime>
+        
+        <tag>GitLab</tag>
+         
+         
+           
+             
+              <breadCrumb title="其他" url="http://codingtrip.com/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://codingtrip.com/2017/03/27/0015-alian_wakeup/</loc>
     <lastmod>2017-03-27T08:41:25.359Z</lastmod>
     <data>
@@ -65,23 +85,6 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/08/26/0014-mac-aosp/</loc>
-    <lastmod>2016-11-29T01:40:48.165Z</lastmod>
-    <data>
-        <display>
-        <title>在Mac OS中获取和编译android源码(AOSP)</title>
-        <pubTime>2016-08-26T13:49:10.000Z</pubTime>
-        
-        <tag>AOSP</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://codingtrip.com/2016/06/23/0012-adb-shell-am/</loc>
     <lastmod>2016-11-29T01:40:48.165Z</lastmod>
     <data>
@@ -102,40 +105,17 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/05/24/0010-adb-shell-monkey/</loc>
-    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
+    <loc>http://codingtrip.com/2016/08/26/0014-mac-aosp/</loc>
+    <lastmod>2016-11-29T01:40:48.165Z</lastmod>
     <data>
         <display>
-        <title>monkey命令</title>
-        <pubTime>2016-05-24T09:30:26.000Z</pubTime>
+        <title>在Mac OS中获取和编译android源码(AOSP)</title>
+        <pubTime>2016-08-26T13:49:10.000Z</pubTime>
         
-        <tag>Android Debug</tag>
+        <tag>AOSP</tag>
          
          
            
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/05/21/0009_Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
-    <data>
-        <display>
-        <title>Android性能优化</title>
-        <pubTime>2016-05-21T02:42:16.000Z</pubTime>
-        
-        <tag>Android进阶</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
         </display>
     </data>
     </url>
@@ -182,6 +162,46 @@
 
     
   <url>
+    <loc>http://codingtrip.com/2016/05/21/0009_Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
+    <data>
+        <display>
+        <title>Android性能优化</title>
+        <pubTime>2016-05-21T02:42:16.000Z</pubTime>
+        
+        <tag>Android进阶</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://codingtrip.com/2016/05/24/0010-adb-shell-monkey/</loc>
+    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
+    <data>
+        <display>
+        <title>monkey命令</title>
+        <pubTime>2016-05-24T09:30:26.000Z</pubTime>
+        
+        <tag>Android Debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://codingtrip.com/2016/03/17/0005_Android%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87/</loc>
     <lastmod>2016-11-29T01:40:48.163Z</lastmod>
     <data>
@@ -195,26 +215,6 @@
            
              
               <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/11/29/0007_GitLab%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-11-29T01:40:48.163Z</lastmod>
-    <data>
-        <display>
-        <title>Gitlab 使用</title>
-        <pubTime>2016-11-29T01:40:48.163Z</pubTime>
-        
-        <tag>GitLab</tag>
-         
-         
-           
-             
-              <breadCrumb title="其他" url="http://codingtrip.com/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>

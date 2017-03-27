@@ -80,78 +80,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Gitlab 使用]]></title>
-    <link href="http://codingtrip.com/2016/11/29/0007_GitLab%E4%BD%BF%E7%94%A8/"/>
-    <id>http://codingtrip.com/2016/11/29/0007_GitLab使用/</id>
-    <published>2016-11-29T01:40:48.163Z</published>
-    <updated>2016-11-29T01:40:48.163Z</updated>
-    <content type="html"><![CDATA[<h3 id="一、获取项目代码"><a href="#一、获取项目代码" class="headerlink" title="一、获取项目代码"></a>一、获取项目代码</h3><p>登陆之后，你会看到下图的界面。界面右边是你所参与的项目</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片2.png" alt="GitLab"><br></div>
-
-<p>点击项目名称，可进入相应项目界面<br><a id="more"></a></p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片3.png" alt="GitLab"><br></div>
-
-<h4 id="1、提交SSH-KEY"><a href="#1、提交SSH-KEY" class="headerlink" title="1、提交SSH-KEY"></a>1、提交SSH-KEY</h4><p>首先你会看到橙色的提示，要你提供你的SSH-KEY, 请按照提示来添加你的公钥。<br>① 如果之前有生成过私钥和公钥，可直接在你的~/.ssh 目录看到id_rsa、id_rsa.pub这两个文件，将id_rsa.pub文件内容添加即可<br>② 如果未生成过的话，可通过终端输入以下命令生成<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure></p>
-<p>③ 如果后续想更改或者增减新的SSH-KEY，可在Profile Settings界面里（非Project设置界面），选择SSH Keys进行操作</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片4.png" alt="GitLab"><br></div>
-
-<h4 id="2、获取代码"><a href="#2、获取代码" class="headerlink" title="2、获取代码"></a>2、获取代码</h4><p>界面上显示你可以通过http和ssh两种方式来获取代码，我们建议使用SSH.这样可以减少你反复输入密码。</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片5.png" alt="GitLab"><br></div>
-
-<p>点击<img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片6.png" alt="GitLab">可直接copy到当前git地址：git@kf2GitHUB:20248760/VersionManager.git</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片7.png" alt="GitLab"><br></div>
-
-<p>由于我们本机无法自动解析@kf2GitHUB地址，有两种处理方法：  </p>
-<h5 id="①-直接将kf2GitHUB替换成：172-28-2-93"><a href="#①-直接将kf2GitHUB替换成：172-28-2-93" class="headerlink" title="① 直接将kf2GitHUB替换成：172.28.2.93"></a>① 直接将kf2GitHUB替换成：172.28.2.93</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@<span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span>:<span class="number">20248760</span>/VersionManager.git</span><br></pre></td></tr></table></figure>
-<h5 id="②-配置-ssh-config-文件，添加如下内容"><a href="#②-配置-ssh-config-文件，添加如下内容" class="headerlink" title="② 配置  ~/.ssh/config 文件，添加如下内容"></a>② 配置  ~/.ssh/config 文件，添加如下内容</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">host kf2GitHUB</span><br><span class="line">user git</span><br><span class="line">hostname <span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span></span><br><span class="line">port <span class="number">22</span></span><br><span class="line">identityfile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<p>配置成功后，可使用以下命令即可直接clone代码了：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@kf2GitHUB:<span class="number">20248760</span>/VersionManager.git</span><br></pre></td></tr></table></figure></p>
-<p>如果出现以下提示：  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片8.png" alt="GitLab"><br></div>  
-
-<p>输入：ssh-add 即可解决</p>
-<h3 id="二、创建项目以及团队管理"><a href="#二、创建项目以及团队管理" class="headerlink" title="二、创建项目以及团队管理"></a>二、创建项目以及团队管理</h3><h4 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h4><p>回到Projects视图窗口，如下图，点击右侧New Project即可创建一个新的项目  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片9.png" alt="GitLab"><br></div>
-
-<p>如下图中红色框中所示，第一项填入你的项目名称，然后选择可访问级别，选择Internal——对登录用户才能进行clone操作，点击Create Project即可完成创建操作  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片10.png" alt="GitLab"><br></div>
-
-<p>创建成功之后会看到如下界面  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片11.png" alt="GitLab"><br></div>
-
-<p>如中间红色框所示：  </p>
-<h5 id="①-如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）"><a href="#①-如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）" class="headerlink" title="① 如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）"></a>① 如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"罗才干"</span></span><br><span class="line">git config --global user<span class="class">.email</span> <span class="string">"lcg833@163.com"</span></span><br></pre></td></tr></table></figure>
-<h5 id="②-创建一个新的仓库"><a href="#②-创建一个新的仓库" class="headerlink" title="② 创建一个新的仓库"></a>② 创建一个新的仓库</h5><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@kf2GitHUB:<span class="number">20248760</span>/AwesomeTest.git</span><br><span class="line">cd AwesomeTest</span><br><span class="line">//然后把你的项目文件添加到该目录下</span><br><span class="line">git commit -m <span class="string">"本次修改的log信息"</span></span><br><span class="line">git push -u origin <span class="literal">master</span></span><br></pre></td></tr></table></figure>
-<h5 id="③-项目文件夹已经存在"><a href="#③-项目文件夹已经存在" class="headerlink" title="③ 项目文件夹已经存在"></a>③ 项目文件夹已经存在</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd existing_folder</span><br><span class="line">git init <span class="comment">//如果之前已经存在git仓库，跳过此步操作</span></span><br><span class="line">git remote add GitLab git@<span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span>:<span class="number">20248760</span>/AwesomeTest.git <span class="comment">//增加新的远程仓库</span></span><br><span class="line">git add .</span><br><span class="line">git commit</span><br><span class="line">git push -u GitLab master <span class="comment">//切换默认远程仓库和分支</span></span><br></pre></td></tr></table></figure>
-<p>如果之前该项目下已经存在一个git仓库，推荐使用第三种方式，可以在新仓库中保留所有原仓库中所有提交历史！  </p>
-<h4 id="2、项目成员管理"><a href="#2、项目成员管理" class="headerlink" title="2、项目成员管理"></a>2、项目成员管理</h4><p>在Project视图，点击Members，可进行项目成员管理，如需添加新成员，如图所示完成三步操作即可：选择成员——分配权限（如需参与提交代码，权限等级不得低于Developer）——Add users to project  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片12.png" alt="GitLab"><br></div>  
-
-<p>关于权限，master拥有最高管理权限，分配时应慎重，一般来说Developer权限足够了，除非该成员需要进行代码审核  </p>
-<h3 id="三、代码提交以及审核流程："><a href="#三、代码提交以及审核流程：" class="headerlink" title="三、代码提交以及审核流程："></a>三、代码提交以及审核流程：</h3><p>每个团队研发有自己的开发分支：比如framework组有dev_framework_android分支。<br>每个软件工程师在自己团队的分支上开发和提交，可以push代码到开发分支，但是不允许merge代码到主干分支。这个merge的操作由merge request机制来完成，团队定期审核团队内提交的代码。并由专人接受审核申请，完成合并到主干的工作。  </p>
-<h4 id="1、如何查看提交"><a href="#1、如何查看提交" class="headerlink" title="1、如何查看提交"></a>1、如何查看提交</h4><p>左侧项目菜单有个Commits项，点击，就可以看到项目目前的所有提交。  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片13.png" alt="GitLab"><br></div>
-
-<p>点击提交记录的一项，你可以看到这个提交的详情。  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片14.png" alt="GitLab"><br></div>
-
-<h4 id="2、如何发起merge-request请求"><a href="#2、如何发起merge-request请求" class="headerlink" title="2、如何发起merge request请求"></a>2、如何发起merge request请求</h4><p>Project视图，选择Commits，找到对应的分支，点击Merge Request发起merge请求  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片15.png" alt="GitLab"><br></div>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="一、获取项目代码"><a href="#一、获取项目代码" class="headerlink" title="一、获取项目代码"></a>一、获取项目代码</h3><p>登陆之后，你会看到下图的界面。界面右边是你所参与的项目</p>
-<div align=center><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片2.png"  alt="GitLab"/><br></div>
-
-<p>点击项目名称，可进入相应项目界面<br>]]>
-    
-    </summary>
-    
-      <category term="GitLab" scheme="http://codingtrip.com/tags/GitLab/"/>
-    
-      <category term="其他" scheme="http://codingtrip.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[在Mac OS中获取和编译android源码(AOSP)]]></title>
     <link href="http://codingtrip.com/2016/08/26/0014-mac-aosp/"/>
     <id>http://codingtrip.com/2016/08/26/0014-mac-aosp/</id>
@@ -428,6 +356,78 @@
       <category term="Android基础" scheme="http://codingtrip.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
     
       <category term="Android" scheme="http://codingtrip.com/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Gitlab 使用]]></title>
+    <link href="http://codingtrip.com/2016/05/18/0007_GitLab%E4%BD%BF%E7%94%A8/"/>
+    <id>http://codingtrip.com/2016/05/18/0007_GitLab使用/</id>
+    <published>2016-05-18T11:07:10.000Z</published>
+    <updated>2017-03-27T08:43:52.634Z</updated>
+    <content type="html"><![CDATA[<h3 id="一、获取项目代码"><a href="#一、获取项目代码" class="headerlink" title="一、获取项目代码"></a>一、获取项目代码</h3><p>登陆之后，你会看到下图的界面。界面右边是你所参与的项目</p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片2.png" alt="GitLab"><br></div>
+
+<p>点击项目名称，可进入相应项目界面<br><a id="more"></a></p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片3.png" alt="GitLab"><br></div>
+
+<h4 id="1、提交SSH-KEY"><a href="#1、提交SSH-KEY" class="headerlink" title="1、提交SSH-KEY"></a>1、提交SSH-KEY</h4><p>首先你会看到橙色的提示，要你提供你的SSH-KEY, 请按照提示来添加你的公钥。<br>① 如果之前有生成过私钥和公钥，可直接在你的~/.ssh 目录看到id_rsa、id_rsa.pub这两个文件，将id_rsa.pub文件内容添加即可<br>② 如果未生成过的话，可通过终端输入以下命令生成<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure></p>
+<p>③ 如果后续想更改或者增减新的SSH-KEY，可在Profile Settings界面里（非Project设置界面），选择SSH Keys进行操作</p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片4.png" alt="GitLab"><br></div>
+
+<h4 id="2、获取代码"><a href="#2、获取代码" class="headerlink" title="2、获取代码"></a>2、获取代码</h4><p>界面上显示你可以通过http和ssh两种方式来获取代码，我们建议使用SSH.这样可以减少你反复输入密码。</p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片5.png" alt="GitLab"><br></div>
+
+<p>点击<img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片6.png" alt="GitLab">可直接copy到当前git地址：git@kf2GitHUB:20248760/VersionManager.git</p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片7.png" alt="GitLab"><br></div>
+
+<p>由于我们本机无法自动解析@kf2GitHUB地址，有两种处理方法：  </p>
+<h5 id="①-直接将kf2GitHUB替换成：172-28-2-93"><a href="#①-直接将kf2GitHUB替换成：172-28-2-93" class="headerlink" title="① 直接将kf2GitHUB替换成：172.28.2.93"></a>① 直接将kf2GitHUB替换成：172.28.2.93</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@<span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span>:<span class="number">20248760</span>/VersionManager.git</span><br></pre></td></tr></table></figure>
+<h5 id="②-配置-ssh-config-文件，添加如下内容"><a href="#②-配置-ssh-config-文件，添加如下内容" class="headerlink" title="② 配置  ~/.ssh/config 文件，添加如下内容"></a>② 配置  ~/.ssh/config 文件，添加如下内容</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">host kf2GitHUB</span><br><span class="line">user git</span><br><span class="line">hostname <span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span></span><br><span class="line">port <span class="number">22</span></span><br><span class="line">identityfile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<p>配置成功后，可使用以下命令即可直接clone代码了：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@kf2GitHUB:<span class="number">20248760</span>/VersionManager.git</span><br></pre></td></tr></table></figure></p>
+<p>如果出现以下提示：  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片8.png" alt="GitLab"><br></div>  
+
+<p>输入：ssh-add 即可解决</p>
+<h3 id="二、创建项目以及团队管理"><a href="#二、创建项目以及团队管理" class="headerlink" title="二、创建项目以及团队管理"></a>二、创建项目以及团队管理</h3><h4 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h4><p>回到Projects视图窗口，如下图，点击右侧New Project即可创建一个新的项目  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片9.png" alt="GitLab"><br></div>
+
+<p>如下图中红色框中所示，第一项填入你的项目名称，然后选择可访问级别，选择Internal——对登录用户才能进行clone操作，点击Create Project即可完成创建操作  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片10.png" alt="GitLab"><br></div>
+
+<p>创建成功之后会看到如下界面  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片11.png" alt="GitLab"><br></div>
+
+<p>如中间红色框所示：  </p>
+<h5 id="①-如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）"><a href="#①-如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）" class="headerlink" title="① 如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）"></a>① 如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"罗才干"</span></span><br><span class="line">git config --global user<span class="class">.email</span> <span class="string">"lcg833@163.com"</span></span><br></pre></td></tr></table></figure>
+<h5 id="②-创建一个新的仓库"><a href="#②-创建一个新的仓库" class="headerlink" title="② 创建一个新的仓库"></a>② 创建一个新的仓库</h5><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@kf2GitHUB:<span class="number">20248760</span>/AwesomeTest.git</span><br><span class="line">cd AwesomeTest</span><br><span class="line">//然后把你的项目文件添加到该目录下</span><br><span class="line">git commit -m <span class="string">"本次修改的log信息"</span></span><br><span class="line">git push -u origin <span class="literal">master</span></span><br></pre></td></tr></table></figure>
+<h5 id="③-项目文件夹已经存在"><a href="#③-项目文件夹已经存在" class="headerlink" title="③ 项目文件夹已经存在"></a>③ 项目文件夹已经存在</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd existing_folder</span><br><span class="line">git init <span class="comment">//如果之前已经存在git仓库，跳过此步操作</span></span><br><span class="line">git remote add GitLab git@<span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span>:<span class="number">20248760</span>/AwesomeTest.git <span class="comment">//增加新的远程仓库</span></span><br><span class="line">git add .</span><br><span class="line">git commit</span><br><span class="line">git push -u GitLab master <span class="comment">//切换默认远程仓库和分支</span></span><br></pre></td></tr></table></figure>
+<p>如果之前该项目下已经存在一个git仓库，推荐使用第三种方式，可以在新仓库中保留所有原仓库中所有提交历史！  </p>
+<h4 id="2、项目成员管理"><a href="#2、项目成员管理" class="headerlink" title="2、项目成员管理"></a>2、项目成员管理</h4><p>在Project视图，点击Members，可进行项目成员管理，如需添加新成员，如图所示完成三步操作即可：选择成员——分配权限（如需参与提交代码，权限等级不得低于Developer）——Add users to project  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片12.png" alt="GitLab"><br></div>  
+
+<p>关于权限，master拥有最高管理权限，分配时应慎重，一般来说Developer权限足够了，除非该成员需要进行代码审核  </p>
+<h3 id="三、代码提交以及审核流程："><a href="#三、代码提交以及审核流程：" class="headerlink" title="三、代码提交以及审核流程："></a>三、代码提交以及审核流程：</h3><p>每个团队研发有自己的开发分支：比如framework组有dev_framework_android分支。<br>每个软件工程师在自己团队的分支上开发和提交，可以push代码到开发分支，但是不允许merge代码到主干分支。这个merge的操作由merge request机制来完成，团队定期审核团队内提交的代码。并由专人接受审核申请，完成合并到主干的工作。  </p>
+<h4 id="1、如何查看提交"><a href="#1、如何查看提交" class="headerlink" title="1、如何查看提交"></a>1、如何查看提交</h4><p>左侧项目菜单有个Commits项，点击，就可以看到项目目前的所有提交。  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片13.png" alt="GitLab"><br></div>
+
+<p>点击提交记录的一项，你可以看到这个提交的详情。  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片14.png" alt="GitLab"><br></div>
+
+<h4 id="2、如何发起merge-request请求"><a href="#2、如何发起merge-request请求" class="headerlink" title="2、如何发起merge request请求"></a>2、如何发起merge request请求</h4><p>Project视图，选择Commits，找到对应的分支，点击Merge Request发起merge请求  </p>
+<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片15.png" alt="GitLab"><br></div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="一、获取项目代码"><a href="#一、获取项目代码" class="headerlink" title="一、获取项目代码"></a>一、获取项目代码</h3><p>登陆之后，你会看到下图的界面。界面右边是你所参与的项目</p>
+<div align=center><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片2.png"  alt="GitLab"/><br></div>
+
+<p>点击项目名称，可进入相应项目界面<br>]]>
+    
+    </summary>
+    
+      <category term="GitLab" scheme="http://codingtrip.com/tags/GitLab/"/>
+    
+      <category term="其他" scheme="http://codingtrip.com/categories/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
