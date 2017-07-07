@@ -4,7 +4,7 @@
   <subtitle><![CDATA[——只为记录曾经走过的路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://codingtrip.com/"/>
-  <updated>2017-07-07T01:54:17.665Z</updated>
+  <updated>2017-07-07T02:00:25.429Z</updated>
   <id>http://codingtrip.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://codingtrip.com/2017/07/07/0016_broadcast/"/>
     <id>http://codingtrip.com/2017/07/07/0016_broadcast/</id>
     <published>2017-07-07T01:27:10.000Z</published>
-    <updated>2017-07-07T01:54:17.665Z</updated>
+    <updated>2017-07-07T02:00:25.429Z</updated>
     <content type="html"><![CDATA[<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>广播(Broadcast)是android中一种用于进程/线程间通信机制，广播分为广播发送和广播接收两个过程。  </p>
 <p>其中要实现广播的接收，是通过注册广播接收者（BroadcastReceiver四大组件之一）来实现的，注册方式分为两种：<strong>动态注册</strong> 和 <strong>静态注册</strong>。</p>
 <ol>
