@@ -4,7 +4,7 @@
   <subtitle><![CDATA[——只为记录曾经走过的路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://codingtrip.com/"/>
-  <updated>2017-07-07T01:31:49.876Z</updated>
+  <updated>2017-07-07T01:33:28.757Z</updated>
   <id>http://codingtrip.com/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <link href="http://codingtrip.com/2017/07/07/0016_broadcast/"/>
     <id>http://codingtrip.com/2017/07/07/0016_broadcast/</id>
     <published>2017-07-07T01:27:10.000Z</published>
-    <updated>2017-07-07T01:31:49.876Z</updated>
+    <updated>2017-07-07T01:33:28.757Z</updated>
     <content type="html"><![CDATA[<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>广播(Broadcast)是android中一种用于进程/线程间通信机制，广播分为广播发送和广播接收两个过程。  </p>
 <p>其中要实现广播的接收，是通过注册广播接收者（BroadcastReceiver四大组件之一）来实现的，注册方式分为两种：<strong>动态注册</strong> 和 <strong>静态注册</strong>。</p>
 <ol>
 <li>动态注册：通过调用Context.registerReceiver()实现</li>
-<li>静态注册：通过在 AndroidManifest.xml中使用<receiver>标签声明一个继承自BroadcastReceiver.java的类</receiver></li>
+<li>静态注册：通过在 AndroidManifest.xml中使用receiver标签声明一个继承自BroadcastReceiver.java的类</li>
 </ol>
 <p>广播的发送也分为三种：</p>
 <ol>
@@ -102,7 +102,7 @@
 <blockquote>
 <p>final HashMap<ibinder, receiverlist=""> mRegisteredReceivers = new HashMap&lt;&gt;();<br>ReceiverList rl = mRegisteredReceivers.get(receiver.asBinder());</ibinder,></p>
 </blockquote>
-<h2 id="2-2-静态注册"><a href="#2-2-静态注册" class="headerlink" title="2.2 静态注册"></a>2.2 静态注册</h2><p>应用通过在 AndroidManifest.xml中使用<receiver>标签声明一个继承自BroadcastReceiver.java的类，即完成静态广播注册，PackageManagerService（后面简称为PKMS）会在开机过程或者应用安装之后进行扫描解析apk,获取静态注册广播信息。</receiver></p>
+<h2 id="2-2-静态注册"><a href="#2-2-静态注册" class="headerlink" title="2.2 静态注册"></a>2.2 静态注册</h2><p>应用通过在 AndroidManifest.xml中使用receiver标签声明一个继承自BroadcastReceiver.java的类，即完成静态广播注册，PackageManagerService（后面简称为PKMS）会在开机过程或者应用安装之后进行扫描解析apk,获取静态注册广播信息。</p>
 <p>[AndroidManifest.xml]<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="title">receiver</span> <span class="attribute">android:name</span>=<span class="value">".MainActivity$CustomReceiver"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">action</span> <span class="attribute">android:name</span>=<span class="value">"CUSTOM_ACTION"</span></span><br><span class="line">        &lt;/<span class="attribute">intent-filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">receiver</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 <p>无论是开机过程扫描，还是应用安装之后扫描，流程都是类似的，由于整个过程太长而且繁琐，就不此作详细描述。现在，我们选择从安装应用的角度来分析，目的是为了找到解析获取到的receiver，以一种什么样的数据结构保存在什么位置。</p>
 <p>我们先来看一下apk的解析流程：<br><img src="http://o7ig1vigz.bkt.clouddn.com/apk_%E8%A7%A3%E6%9E%90%E6%B5%81%E7%A8%8B.png" alt="enter image description here"></p>
@@ -215,7 +215,7 @@
 <p>其中要实现广播的接收，是通过注册广播接收者（BroadcastReceiver四大组件之一）来实现的，注册方式分为两种：<strong>动态注册</strong> 和 <strong>静态注册</strong>。</p>
 <ol>
 <li>动态注册：通过调用Context.registerReceiver()实现</li>
-<li>静态注册：通过在 AndroidManifest.xml中使用<receiver>标签声明一个继承自BroadcastReceiver.java的类</li>
+<li>静态注册：通过在 AndroidManifest.xml中使用receiver标签声明一个继承自BroadcastReceiver.java的类</li>
 </ol>
 <p>广播的发送也分为三种：</p>
 <ol>
