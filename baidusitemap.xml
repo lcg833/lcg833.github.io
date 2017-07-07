@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://codingtrip.com/2017/07/07/0016_broadcast/</loc>
+    <lastmod>2017-07-07T01:27:21.544Z</lastmod>
+    <data>
+        <display>
+        <title>Android Broadcast广播机制</title>
+        <pubTime>2017-07-07T01:27:10.000Z</pubTime>
+        
+        <tag>Framework</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://codingtrip.com/2016/05/18/0007_GitLab%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2017-03-27T08:43:52.634Z</lastmod>
     <data>
@@ -65,20 +82,17 @@
     
     
   <url>
-    <loc>http://codingtrip.com/2016/06/23/0013-adb-shell-dumpsys/</loc>
+    <loc>http://codingtrip.com/2016/08/26/0014-mac-aosp/</loc>
     <lastmod>2016-11-29T01:40:48.165Z</lastmod>
     <data>
         <display>
-        <title>dumpsys命令</title>
-        <pubTime>2016-06-23T07:59:53.000Z</pubTime>
+        <title>在Mac OS中获取和编译android源码(AOSP)</title>
+        <pubTime>2016-08-26T13:49:10.000Z</pubTime>
         
-        <tag>Android Debug</tag>
+        <tag>AOSP</tag>
          
          
            
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
         </display>
     </data>
     </url>
@@ -105,51 +119,14 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/08/26/0014-mac-aosp/</loc>
+    <loc>http://codingtrip.com/2016/06/23/0013-adb-shell-dumpsys/</loc>
     <lastmod>2016-11-29T01:40:48.165Z</lastmod>
     <data>
         <display>
-        <title>在Mac OS中获取和编译android源码(AOSP)</title>
-        <pubTime>2016-08-26T13:49:10.000Z</pubTime>
-        
-        <tag>AOSP</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/06/22/0011-adb-shell-svc/</loc>
-    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
-    <data>
-        <display>
-        <title>svc命令</title>
-        <pubTime>2016-06-22T13:57:10.000Z</pubTime>
+        <title>dumpsys命令</title>
+        <pubTime>2016-06-23T07:59:53.000Z</pubTime>
         
         <tag>Android Debug</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/05/19/0008_%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%AE%9E%E8%B7%B5%EF%BC%88android%EF%BC%89/</loc>
-    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
-    <data>
-        <display>
-        <title>单元测试实践-android</title>
-        <pubTime>2016-05-19T11:01:45.000Z</pubTime>
-        
-        <tag>Android基础</tag>
          
          
            
@@ -190,6 +167,46 @@
         <pubTime>2016-05-24T09:30:26.000Z</pubTime>
         
         <tag>Android Debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://codingtrip.com/2016/06/22/0011-adb-shell-svc/</loc>
+    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
+    <data>
+        <display>
+        <title>svc命令</title>
+        <pubTime>2016-06-22T13:57:10.000Z</pubTime>
+        
+        <tag>Android Debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://codingtrip.com/2016/05/19/0008_%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%AE%9E%E8%B7%B5%EF%BC%88android%EF%BC%89/</loc>
+    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
+    <data>
+        <display>
+        <title>单元测试实践-android</title>
+        <pubTime>2016-05-19T11:01:45.000Z</pubTime>
+        
+        <tag>Android基础</tag>
          
          
            
