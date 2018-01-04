@@ -4,7 +4,7 @@
   <subtitle><![CDATA[——只为记录曾经走过的路]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://codingtrip.com/"/>
-  <updated>2017-07-07T02:00:25.429Z</updated>
+  <updated>2018-01-04T05:12:39.477Z</updated>
   <id>http://codingtrip.com/</id>
   
   <author>
@@ -13,6 +13,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[为什么学C++]]></title>
+    <link href="http://codingtrip.com/2018/01/04/0018_c++_01/"/>
+    <id>http://codingtrip.com/2018/01/04/0018_c++_01/</id>
+    <published>2018-01-04T01:25:00.000Z</published>
+    <updated>2018-01-04T05:12:39.477Z</updated>
+    <content type="html"><![CDATA[<p>老实说，我大学四年是虚度光阴的，没认真搞过学习。虽然学校也开过C/C++课程，但由于经常逃课，学校安排的课程设计基本是靠抄同学蒙混过关的。转眼间已经工作三年半了，但这方面仍然是我的一块短板，而且愈发显得明显。刚毕业的时候作为一个小白，来到了现在这家公司，做了差不多两年的Android应用开发，从16年10月开始转入Framework开发。Framework接触多了，就发现没法完全停留在java层了，很多问题深入下去都或多或少会涉及到C/C++。说实在的，由于对C/C++这块不是很懂，很多时候分析问题会显得力不从心。恰好，最近项目中接手了一个纯C/C++的项目，借此契机，正好系统性的学习一下这块内容。</p>
+<p>本篇就是用来灌水，立Flag的：18年学好C++!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>老实说，我大学四年是虚度光阴的，没认真搞过学习。虽然学校也开过C/C++课程，但由于经常逃课，学校安排的课程设计基本是靠抄同学蒙混过关的。转眼间已经工作三年半了，但这方面仍然是我的一块短板，而且愈发显得明显。刚毕业的时候作为一个小白，来到了现在这家公司，做了差不多两年的An]]>
+    </summary>
+    
+      <category term="瞎扯淡" scheme="http://codingtrip.com/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
+    
+      <category term="C++" scheme="http://codingtrip.com/categories/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Python基础入门学习]]></title>
+    <link href="http://codingtrip.com/2017/12/15/0017_python_01/"/>
+    <id>http://codingtrip.com/2017/12/15/0017_python_01/</id>
+    <published>2017-12-15T07:54:00.000Z</published>
+    <updated>2018-01-04T05:10:15.230Z</updated>
+    <content type="html"><![CDATA[<h2 id="先开个篇，日后再补"><a href="#先开个篇，日后再补" class="headerlink" title="先开个篇，日后再补"></a>先开个篇，日后再补</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="先开个篇，日后再补"><a href="#先开个篇，日后再补" class="headerlink" title="先开个篇，日后再补"></a>先开个篇，日后再补</h2>]]>
+    </summary>
+    
+      <category term="Python基础" scheme="http://codingtrip.com/tags/Python%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="Python" scheme="http://codingtrip.com/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Android Broadcast广播机制]]></title>
@@ -500,153 +536,6 @@
       <category term="Android进阶" scheme="http://codingtrip.com/tags/Android%E8%BF%9B%E9%98%B6/"/>
     
       <category term="Android" scheme="http://codingtrip.com/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[单元测试实践-android]]></title>
-    <link href="http://codingtrip.com/2016/05/19/0008_%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%AE%9E%E8%B7%B5%EF%BC%88android%EF%BC%89/"/>
-    <id>http://codingtrip.com/2016/05/19/0008_单元测试实践（android）/</id>
-    <published>2016-05-19T11:01:45.000Z</published>
-    <updated>2016-11-29T01:40:48.164Z</updated>
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>单元测试是最基础的测试，有效的单元测试将直接提升产品质量。软件开发工程师应当将编写和运行测试作为开发过程的一部分，<br>良好的单元测试能够在开发早期发现软件缺陷，让工程师对自己写的代码感到自信。<br>本文将描述如何使用JUnit4框架在Android工程中进行单元测试，开发环境为Android Studio，Android中有两种单元测试：<br>Local Unit Tests和Instrumented Tests，Instrumented Tests依赖于设备，可进行单元、组件、界面测试，<br>本文重点描述如何进行本地单元测试（Local Unit Tests）。<br>注：文中提到的例子在Google Samples的BasicSample基础上进行了部分修改。<br><a id="more"></a></p>
-<h2 id="单元测试组成"><a href="#单元测试组成" class="headerlink" title="单元测试组成"></a>单元测试组成</h2><h3 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h3><p>使用版本管理控制软件，推荐使用git，目前最好的版本控制软件，没有之一。<br><a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
-<h3 id="构建管理工具"><a href="#构建管理工具" class="headerlink" title="构建管理工具"></a>构建管理工具</h3><p>Android Studio默认集成工具为gradle。<br><a href="https://docs.gradle.org/current/userguide/userguide.html" target="_blank" rel="external">https://docs.gradle.org/current/userguide/userguide.html</a></p>
-<h3 id="测试框架"><a href="#测试框架" class="headerlink" title="测试框架"></a>测试框架</h3><p>单元测试框架junit4<br><a href="http://junit.org/junit4/" target="_blank" rel="external">http://junit.org/junit4/</a></p>
-<p>模拟对象框架mockito<br><a href="http://mockito.org/" target="_blank" rel="external">http://mockito.org/</a></p>
-<p>模拟真机功能Robolectric。<br><a href="http://robolectric.org/" target="_blank" rel="external">http://robolectric.org/</a></p>
-<h3 id="持续集成平台"><a href="#持续集成平台" class="headerlink" title="持续集成平台"></a>持续集成平台</h3><p>自动化构建工具，推荐使用jenkins。<br><a href="https://jenkins.io/index.html" target="_blank" rel="external">https://jenkins.io/index.html</a></p>
-<h2 id="Android单元测试介绍"><a href="#Android单元测试介绍" class="headerlink" title="Android单元测试介绍"></a>Android单元测试介绍</h2><h3 id="单元测试目录"><a href="#单元测试目录" class="headerlink" title="单元测试目录"></a>单元测试目录</h3><p>工程目录app-&gt;src-&gt;test目录</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%871.png" alt="UnitTest"><br></div>
-
-<h3 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h3><p>在工程app/build.gralde文件中增加如下依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    // Unit testing dependencies.</span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'junit:junit:4.12'</span></span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'org.mockito:mockito-core:1.10.19'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="添加代码覆盖率支持"><a href="#添加代码覆盖率支持" class="headerlink" title="添加代码覆盖率支持"></a>添加代码覆盖率支持</h3><p>增加jacoco支持<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'jacoco'</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ependencies &#123;</span><br><span class="line">    // Unit testing dependencies.</span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'junit:junit:4.12'</span></span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'org.mockito:mockito-core:1.10.19'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>// 增加jacoco，工具版本可以根据最新版本进行修改<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">jacoco</span> &#123;</span><br><span class="line">    <span class="title">toolVersion</span> = <span class="string">"0.7.6.201602180812"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="增加覆盖率统计和Lint选项"><a href="#增加覆盖率统计和Lint选项" class="headerlink" title="增加覆盖率统计和Lint选项"></a>增加覆盖率统计和Lint选项</h3><p>Android节点buildTypes增加testCoverageEnabled = true<br>Lint选项设置为遇到错误不终止。<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">android</span> &#123;</span><br><span class="line">    compileSdkVersion <span class="number">23</span></span><br><span class="line">    buildToolsVersion <span class="string">'23.0.2'</span></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId <span class="string">"com.example.android.testing.unittesting.BasicSample"</span></span><br><span class="line">        minSdkVersion <span class="number">8</span></span><br><span class="line">        versionCode <span class="number">1</span></span><br><span class="line">        versionName <span class="string">"1.0"</span></span><br><span class="line">        targetSdkVersion <span class="number">23</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="name">buildTypes</span> &#123;</span><br><span class="line">        debug &#123;</span><br><span class="line">            testCoverageEnabled = <span class="keyword">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="name">productFlavors</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="name">lintOptions</span> &#123;</span><br><span class="line">        // I prefer avoiding a build fail <span class="keyword">if</span> there is any warning, for they are only warnings</span><br><span class="line">        abortOnError <span class="keyword">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="图形化运行单元测试工具"><a href="#图形化运行单元测试工具" class="headerlink" title="图形化运行单元测试工具"></a>图形化运行单元测试工具</h3><p>android studio自动集成了单元测试覆盖率统计工具，选中编写好的测试类，右键点击Run ‘XXXXXX’ with Coverage。</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%872.png" alt="UnitTest"><br></div>
-
-<h3 id="查看覆盖率"><a href="#查看覆盖率" class="headerlink" title="查看覆盖率"></a>查看覆盖率</h3><p>出现覆盖率面板，按F4或双击相关行，可以打开源代码查看具体哪些行没有覆盖到。</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%873.png" alt="UnitTest"><br></div>
-
-<h3 id="查看代码覆盖情况"><a href="#查看代码覆盖情况" class="headerlink" title="查看代码覆盖情况"></a>查看代码覆盖情况</h3><p>两种颜色表明覆盖和未覆盖两种状态，此时开发工程师应当分析是否需要增加新的测试代码对未进行测试的语句行覆盖。</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%874.png" alt="UnitTest"><br></div>
-
-<h2 id="Jenkins配置说明"><a href="#Jenkins配置说明" class="headerlink" title="Jenkins配置说明"></a>Jenkins配置说明</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%875.png" alt="UnitTest"><br></div>
-
-<h3 id="配置仓库"><a href="#配置仓库" class="headerlink" title="配置仓库"></a>配置仓库</h3><p>推荐使用git，目前最好的版本控制软件，没有之一。</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%876.png" alt="UnitTest"><br></div>
-
-<h3 id="构建触发器"><a href="#构建触发器" class="headerlink" title="构建触发器"></a>构建触发器</h3><p>一般选择定时检测版本库，有提交就自动构建。</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%877.png" alt="UnitTest"><br></div>
-
-<h3 id="增加构建Gradle命令"><a href="#增加构建Gradle命令" class="headerlink" title="增加构建Gradle命令"></a>增加构建Gradle命令</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%878.png" alt="UnitTest"><br></div>
-
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%879.png" alt="UnitTest"><br></div>
-
-<h3 id="构建后操作-增加Lint结果"><a href="#构建后操作-增加Lint结果" class="headerlink" title="构建后操作-增加Lint结果"></a>构建后操作-增加Lint结果</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8710.png" alt="UnitTest"><br></div>
-
-<p>在Lint files项填入**/app/build/outputs/lint-results-debug.xml</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8711.png" alt="UnitTest"><br></div>
-
-<h3 id="构建后操作-增加JUnit测试报告"><a href="#构建后操作-增加JUnit测试报告" class="headerlink" title="构建后操作-增加JUnit测试报告"></a>构建后操作-增加JUnit测试报告</h3><p>在测试报告项填入<strong>/build/test-results/</strong>/*.xml</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8712.png" alt="UnitTest"><br></div>
-
-<h3 id="构建后操作-增加覆盖率报告"><a href="#构建后操作-增加覆盖率报告" class="headerlink" title="构建后操作-增加覆盖率报告"></a>构建后操作-增加覆盖率报告</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Path to exec files项增加<span class="keyword">*</span><span class="keyword">*</span>/build/jacoco/<span class="keyword">*</span>.exec</span><br><span class="line">Path to class directories项增加<span class="keyword">*</span><span class="keyword">*</span>/build/intermediates/classes</span><br><span class="line">Path to source directories增加<span class="keyword">*</span><span class="keyword">*</span>/src/main/java</span><br><span class="line">Exclusions项增加：</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>/R.class, <span class="keyword">*</span><span class="keyword">*</span>/R$<span class="keyword">*</span>.class, <span class="keyword">*</span><span class="keyword">*</span>/<span class="keyword">*</span>$ViewInjector<span class="keyword">*</span>.<span class="keyword">*</span>,<span class="keyword">*</span><span class="keyword">*</span>/BuildConfig.<span class="keyword">*</span>,<span class="keyword">*</span><span class="keyword">*</span>/Manifest<span class="keyword">*</span>.<span class="keyword">*</span></span><br></pre></td></tr></table></figure>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8713.png" alt="UnitTest"><br></div>
-
-<h3 id="邮件通知"><a href="#邮件通知" class="headerlink" title="邮件通知"></a>邮件通知</h3><p>填写接收构建失败邮件的邮箱地址，需要确认在Jenkins的系统管理中增加了邮件服务器和管理员的配置。</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8714.png" alt="UnitTest"><br></div>
-
-<h3 id="自动集成效果"><a href="#自动集成效果" class="headerlink" title="自动集成效果"></a>自动集成效果</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8715.png" alt="UnitTest"><br></div>
-
-<p>点击各目录可查看详细的问题信息</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8716.png" alt="UnitTest"><br></div>
-
-<p>点击文件名可查看具体的代码行覆盖情况</p>
-<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8717.png" alt="UnitTest"><br></div>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>单元测试是最基础的测试，有效的单元测试将直接提升产品质量。软件开发工程师应当将编写和运行测试作为开发过程的一部分，<br>良好的单元测试能够在开发早期发现软件缺陷，让工程师对自己写的代码感到自信。<br>本文将描述如何使用JUnit4框架在Android工程中进行单元测试，开发环境为Android Studio，Android中有两种单元测试：<br>Local Unit Tests和Instrumented Tests，Instrumented Tests依赖于设备，可进行单元、组件、界面测试，<br>本文重点描述如何进行本地单元测试（Local Unit Tests）。<br>注：文中提到的例子在Google Samples的BasicSample基础上进行了部分修改。<br>]]>
-    
-    </summary>
-    
-      <category term="Android基础" scheme="http://codingtrip.com/tags/Android%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="Android" scheme="http://codingtrip.com/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Gitlab 使用]]></title>
-    <link href="http://codingtrip.com/2016/05/18/0007_GitLab%E4%BD%BF%E7%94%A8/"/>
-    <id>http://codingtrip.com/2016/05/18/0007_GitLab使用/</id>
-    <published>2016-05-18T11:07:10.000Z</published>
-    <updated>2017-03-27T08:43:52.634Z</updated>
-    <content type="html"><![CDATA[<h3 id="一、获取项目代码"><a href="#一、获取项目代码" class="headerlink" title="一、获取项目代码"></a>一、获取项目代码</h3><p>登陆之后，你会看到下图的界面。界面右边是你所参与的项目</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片2.png" alt="GitLab"><br></div>
-
-<p>点击项目名称，可进入相应项目界面<br><a id="more"></a></p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片3.png" alt="GitLab"><br></div>
-
-<h4 id="1、提交SSH-KEY"><a href="#1、提交SSH-KEY" class="headerlink" title="1、提交SSH-KEY"></a>1、提交SSH-KEY</h4><p>首先你会看到橙色的提示，要你提供你的SSH-KEY, 请按照提示来添加你的公钥。<br>① 如果之前有生成过私钥和公钥，可直接在你的~/.ssh 目录看到id_rsa、id_rsa.pub这两个文件，将id_rsa.pub文件内容添加即可<br>② 如果未生成过的话，可通过终端输入以下命令生成<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure></p>
-<p>③ 如果后续想更改或者增减新的SSH-KEY，可在Profile Settings界面里（非Project设置界面），选择SSH Keys进行操作</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片4.png" alt="GitLab"><br></div>
-
-<h4 id="2、获取代码"><a href="#2、获取代码" class="headerlink" title="2、获取代码"></a>2、获取代码</h4><p>界面上显示你可以通过http和ssh两种方式来获取代码，我们建议使用SSH.这样可以减少你反复输入密码。</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片5.png" alt="GitLab"><br></div>
-
-<p>点击<img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片6.png" alt="GitLab">可直接copy到当前git地址：git@kf2GitHUB:20248760/VersionManager.git</p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片7.png" alt="GitLab"><br></div>
-
-<p>由于我们本机无法自动解析@kf2GitHUB地址，有两种处理方法：  </p>
-<h5 id="①-直接将kf2GitHUB替换成：172-28-2-93"><a href="#①-直接将kf2GitHUB替换成：172-28-2-93" class="headerlink" title="① 直接将kf2GitHUB替换成：172.28.2.93"></a>① 直接将kf2GitHUB替换成：172.28.2.93</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@<span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span>:<span class="number">20248760</span>/VersionManager.git</span><br></pre></td></tr></table></figure>
-<h5 id="②-配置-ssh-config-文件，添加如下内容"><a href="#②-配置-ssh-config-文件，添加如下内容" class="headerlink" title="② 配置  ~/.ssh/config 文件，添加如下内容"></a>② 配置  ~/.ssh/config 文件，添加如下内容</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">host kf2GitHUB</span><br><span class="line">user git</span><br><span class="line">hostname <span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span></span><br><span class="line">port <span class="number">22</span></span><br><span class="line">identityfile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<p>配置成功后，可使用以下命令即可直接clone代码了：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@kf2GitHUB:<span class="number">20248760</span>/VersionManager.git</span><br></pre></td></tr></table></figure></p>
-<p>如果出现以下提示：  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片8.png" alt="GitLab"><br></div>  
-
-<p>输入：ssh-add 即可解决</p>
-<h3 id="二、创建项目以及团队管理"><a href="#二、创建项目以及团队管理" class="headerlink" title="二、创建项目以及团队管理"></a>二、创建项目以及团队管理</h3><h4 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h4><p>回到Projects视图窗口，如下图，点击右侧New Project即可创建一个新的项目  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片9.png" alt="GitLab"><br></div>
-
-<p>如下图中红色框中所示，第一项填入你的项目名称，然后选择可访问级别，选择Internal——对登录用户才能进行clone操作，点击Create Project即可完成创建操作  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片10.png" alt="GitLab"><br></div>
-
-<p>创建成功之后会看到如下界面  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片11.png" alt="GitLab"><br></div>
-
-<p>如中间红色框所示：  </p>
-<h5 id="①-如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）"><a href="#①-如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）" class="headerlink" title="① 如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）"></a>① 如果之前未进行过config配置，可使用以下命令进行配置（为了在git提交记录里显示你的信息）</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"罗才干"</span></span><br><span class="line">git config --global user<span class="class">.email</span> <span class="string">"lcg833@163.com"</span></span><br></pre></td></tr></table></figure>
-<h5 id="②-创建一个新的仓库"><a href="#②-创建一个新的仓库" class="headerlink" title="② 创建一个新的仓库"></a>② 创建一个新的仓库</h5><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@kf2GitHUB:<span class="number">20248760</span>/AwesomeTest.git</span><br><span class="line">cd AwesomeTest</span><br><span class="line">//然后把你的项目文件添加到该目录下</span><br><span class="line">git commit -m <span class="string">"本次修改的log信息"</span></span><br><span class="line">git push -u origin <span class="literal">master</span></span><br></pre></td></tr></table></figure>
-<h5 id="③-项目文件夹已经存在"><a href="#③-项目文件夹已经存在" class="headerlink" title="③ 项目文件夹已经存在"></a>③ 项目文件夹已经存在</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd existing_folder</span><br><span class="line">git init <span class="comment">//如果之前已经存在git仓库，跳过此步操作</span></span><br><span class="line">git remote add GitLab git@<span class="number">172.28</span><span class="number">.2</span><span class="number">.93</span>:<span class="number">20248760</span>/AwesomeTest.git <span class="comment">//增加新的远程仓库</span></span><br><span class="line">git add .</span><br><span class="line">git commit</span><br><span class="line">git push -u GitLab master <span class="comment">//切换默认远程仓库和分支</span></span><br></pre></td></tr></table></figure>
-<p>如果之前该项目下已经存在一个git仓库，推荐使用第三种方式，可以在新仓库中保留所有原仓库中所有提交历史！  </p>
-<h4 id="2、项目成员管理"><a href="#2、项目成员管理" class="headerlink" title="2、项目成员管理"></a>2、项目成员管理</h4><p>在Project视图，点击Members，可进行项目成员管理，如需添加新成员，如图所示完成三步操作即可：选择成员——分配权限（如需参与提交代码，权限等级不得低于Developer）——Add users to project  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片12.png" alt="GitLab"><br></div>  
-
-<p>关于权限，master拥有最高管理权限，分配时应慎重，一般来说Developer权限足够了，除非该成员需要进行代码审核  </p>
-<h3 id="三、代码提交以及审核流程："><a href="#三、代码提交以及审核流程：" class="headerlink" title="三、代码提交以及审核流程："></a>三、代码提交以及审核流程：</h3><p>每个团队研发有自己的开发分支：比如framework组有dev_framework_android分支。<br>每个软件工程师在自己团队的分支上开发和提交，可以push代码到开发分支，但是不允许merge代码到主干分支。这个merge的操作由merge request机制来完成，团队定期审核团队内提交的代码。并由专人接受审核申请，完成合并到主干的工作。  </p>
-<h4 id="1、如何查看提交"><a href="#1、如何查看提交" class="headerlink" title="1、如何查看提交"></a>1、如何查看提交</h4><p>左侧项目菜单有个Commits项，点击，就可以看到项目目前的所有提交。  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片13.png" alt="GitLab"><br></div>
-
-<p>点击提交记录的一项，你可以看到这个提交的详情。  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片14.png" alt="GitLab"><br></div>
-
-<h4 id="2、如何发起merge-request请求"><a href="#2、如何发起merge-request请求" class="headerlink" title="2、如何发起merge request请求"></a>2、如何发起merge request请求</h4><p>Project视图，选择Commits，找到对应的分支，点击Merge Request发起merge请求  </p>
-<div align="center"><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片15.png" alt="GitLab"><br></div>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="一、获取项目代码"><a href="#一、获取项目代码" class="headerlink" title="一、获取项目代码"></a>一、获取项目代码</h3><p>登陆之后，你会看到下图的界面。界面右边是你所参与的项目</p>
-<div align=center><br><img src="http://o7ig1vigz.bkt.clouddn.com/other/gitlab/图片2.png"  alt="GitLab"/><br></div>
-
-<p>点击项目名称，可进入相应项目界面<br>]]>
-    
-    </summary>
-    
-      <category term="GitLab" scheme="http://codingtrip.com/tags/GitLab/"/>
-    
-      <category term="其他" scheme="http://codingtrip.com/categories/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   

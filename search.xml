@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title><![CDATA[为什么学C++]]></title>
+      <url>http://codingtrip.com/2018/01/04/0018_c++_01/</url>
+      <content type="html"><![CDATA[<p>老实说，我大学四年是虚度光阴的，没认真搞过学习。虽然学校也开过C/C++课程，但由于经常逃课，学校安排的课程设计基本是靠抄同学蒙混过关的。转眼间已经工作三年半了，但这方面仍然是我的一块短板，而且愈发显得明显。刚毕业的时候作为一个小白，来到了现在这家公司，做了差不多两年的Android应用开发，从16年10月开始转入Framework开发。Framework接触多了，就发现没法完全停留在java层了，很多问题深入下去都或多或少会涉及到C/C++。说实在的，由于对C/C++这块不是很懂，很多时候分析问题会显得力不从心。恰好，最近项目中接手了一个纯C/C++的项目，借此契机，正好系统性的学习一下这块内容。</p>
+<p>本篇就是用来灌水，立Flag的：18年学好C++!</p>
+]]></content>
+      
+        <categories>
+            
+            <category> C++ </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 瞎扯淡 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Python基础入门学习]]></title>
+      <url>http://codingtrip.com/2017/12/15/0017_python_01/</url>
+      <content type="html"><![CDATA[<h2 id="先开个篇，日后再补"><a href="#先开个篇，日后再补" class="headerlink" title="先开个篇，日后再补"></a>先开个篇，日后再补</h2>]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python基础 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android Broadcast广播机制]]></title>
       <url>http://codingtrip.com/2017/07/07/0016_broadcast/</url>
       <content type="html"><![CDATA[<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>广播(Broadcast)是android中一种用于进程/线程间通信机制，广播分为广播发送和广播接收两个过程。  </p>
@@ -802,8 +844,7 @@ Log.d(TAG,&quot;markdown learning&quot;);
       <content type="html"><![CDATA[<p>(本文旨在记录一些日后工作生活可能会用到的内容)</p>
 <h1 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h1><h2 id="MarkDown编辑器"><a href="#MarkDown编辑器" class="headerlink" title="MarkDown编辑器"></a>MarkDown编辑器</h2><h3 id="1、Atom-github出的编辑器；功能十分强大，支持各种编程语言；关键可实时预览MarkDown编辑效果"><a href="#1、Atom-github出的编辑器；功能十分强大，支持各种编程语言；关键可实时预览MarkDown编辑效果" class="headerlink" title="1、Atom : github出的编辑器；功能十分强大，支持各种编程语言；关键可实时预览MarkDown编辑效果"></a>1、<a href="https://atom.io/" target="_blank" rel="external">Atom</a> : github出的编辑器；功能十分强大，支持各种编程语言；关键可实时预览MarkDown编辑效果</h3><h3 id="2、Visual-Studio-Code"><a href="#2、Visual-Studio-Code" class="headerlink" title="2、Visual Studio Code"></a>2、<a href="https://www.visualstudio.com/products/code-vs" target="_blank" rel="external">Visual Studio Code</a></h3><h3 id="3、notepad"><a href="#3、notepad" class="headerlink" title="3、notepad++"></a>3、<a href="https://notepad-plus-plus.org//" target="_blank" rel="external">notepad++</a></h3><a id="more"></a>
 <h2 id="OS-X-常用软件"><a href="#OS-X-常用软件" class="headerlink" title="OS X 常用软件"></a>OS X 常用软件</h2><h3 id="1、Caffeine"><a href="#1、Caffeine" class="headerlink" title="1、Caffeine"></a>1、Caffeine</h3><p>一款可自由设置常亮，不熄屏的软件</p>
-<h3 id="2、MplayerX-一款很不错的本地视频播放器"><a href="#2、MplayerX-一款很不错的本地视频播放器" class="headerlink" title="2、MplayerX :一款很不错的本地视频播放器"></a>2、<a href="http://mplayerx.org/" target="_blank" rel="external">MplayerX</a> :一款很不错的本地视频播放器</h3><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="lantern-网页翻墙神器，免费github地址"><a href="#lantern-网页翻墙神器，免费github地址" class="headerlink" title="lantern:网页翻墙神器，免费github地址"></a><a href="https://getlantern.org/" target="_blank" rel="external">lantern</a>:网页翻墙神器，免费<a href="https://github.com/getlantern/lantern" target="_blank" rel="external">github地址</a></h3><p>gsettings set org.gnome.desktop.media-handling automount-open false</p>
-]]></content>
+<h3 id="2、MplayerX-一款很不错的本地视频播放器"><a href="#2、MplayerX-一款很不错的本地视频播放器" class="headerlink" title="2、MplayerX :一款很不错的本地视频播放器"></a>2、<a href="http://mplayerx.org/" target="_blank" rel="external">MplayerX</a> :一款很不错的本地视频播放器</h3><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="lantern-网页翻墙神器，免费github地址"><a href="#lantern-网页翻墙神器，免费github地址" class="headerlink" title="lantern:网页翻墙神器，免费github地址"></a><a href="https://getlantern.org/" target="_blank" rel="external">lantern</a>:网页翻墙神器，免费<a href="https://github.com/getlantern/lantern" target="_blank" rel="external">github地址</a></h3>]]></content>
       
         <categories>
             
