@@ -4,47 +4,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2018/01/04/0018_c++_01/</loc>
-    <lastmod>2018-01-04T05:12:39.477Z</lastmod>
-    <data>
-        <display>
-        <title>为什么学C++</title>
-        <pubTime>2018-01-04T01:25:00.000Z</pubTime>
-        
-        <tag>瞎扯淡</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="http://codingtrip.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2017/12/15/0017_python_01/</loc>
-    <lastmod>2018-01-04T05:10:15.230Z</lastmod>
-    <data>
-        <display>
-        <title>Python基础入门学习</title>
-        <pubTime>2017-12-15T07:54:00.000Z</pubTime>
-        
-        <tag>Python基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://codingtrip.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2015/07/24/0000_DailyNotes/</loc>
+    <loc>http://codingtrip.com/2015/07/24/0000_notes/</loc>
     <lastmod>2018-01-04T01:19:45.100Z</lastmod>
     <data>
         <display>
@@ -64,7 +24,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2017/07/07/0016_broadcast/</loc>
+    <loc>http://codingtrip.com/2017/07/07/0011_broadcast/</loc>
     <lastmod>2017-07-07T02:00:25.429Z</lastmod>
     <data>
         <display>
@@ -81,7 +41,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/05/18/0007_GitLab%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://codingtrip.com/2016/05/18/0003_gitlab_use/</loc>
     <lastmod>2017-03-27T08:43:52.634Z</lastmod>
     <data>
         <display>
@@ -101,7 +61,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2017/03/27/0015-alian_wakeup/</loc>
+    <loc>http://codingtrip.com/2017/03/27/0010-alian_wakeup/</loc>
     <lastmod>2017-03-27T08:41:25.359Z</lastmod>
     <data>
         <display>
@@ -117,69 +77,12 @@
     </url>
 
     
-  <url>
-    <loc>http://codingtrip.com/2015/09/20/0004_Android_Tips_002/</loc>
-    <lastmod>2016-11-29T01:42:20.410Z</lastmod>
-    <data>
-        <display>
-        <title>Android Tips(二)</title>
-        <pubTime>2015-09-20T07:19:24.000Z</pubTime>
-        
-        <tag>Android基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
     
     
     
   <url>
-    <loc>http://codingtrip.com/2016/08/26/0014-mac-aosp/</loc>
-    <lastmod>2016-11-29T01:40:48.165Z</lastmod>
-    <data>
-        <display>
-        <title>在Mac OS中获取和编译android源码(AOSP)</title>
-        <pubTime>2016-08-26T13:49:10.000Z</pubTime>
-        
-        <tag>AOSP</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/06/23/0012-adb-shell-am/</loc>
-    <lastmod>2016-11-29T01:40:48.165Z</lastmod>
-    <data>
-        <display>
-        <title>am命令</title>
-        <pubTime>2016-06-23T00:16:40.000Z</pubTime>
-        
-        <tag>Android Debug</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/06/23/0013-adb-shell-dumpsys/</loc>
+    <loc>http://codingtrip.com/2016/06/23/0008-adb-shell-dumpsys/</loc>
     <lastmod>2016-11-29T01:40:48.165Z</lastmod>
     <data>
         <display>
@@ -199,7 +102,44 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/06/22/0011-adb-shell-svc/</loc>
+    <loc>http://codingtrip.com/2016/08/26/0009-mac-aosp/</loc>
+    <lastmod>2016-11-29T01:40:48.165Z</lastmod>
+    <data>
+        <display>
+        <title>在Mac OS中获取和编译android源码(AOSP)</title>
+        <pubTime>2016-08-26T13:49:10.000Z</pubTime>
+        
+        <tag>AOSP</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://codingtrip.com/2016/06/23/0007-adb-shell-am/</loc>
+    <lastmod>2016-11-29T01:40:48.165Z</lastmod>
+    <data>
+        <display>
+        <title>am命令</title>
+        <pubTime>2016-06-23T00:16:40.000Z</pubTime>
+        
+        <tag>Android Debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://codingtrip.com/2016/06/22/0006-adb-shell-svc/</loc>
     <lastmod>2016-11-29T01:40:48.164Z</lastmod>
     <data>
         <display>
@@ -219,7 +159,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/05/19/0008_%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%AE%9E%E8%B7%B5%EF%BC%88android%EF%BC%89/</loc>
+    <loc>http://codingtrip.com/2016/05/19/0004_unit_test/</loc>
     <lastmod>2016-11-29T01:40:48.164Z</lastmod>
     <data>
         <display>
@@ -239,27 +179,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/05/21/0009_Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2016-11-29T01:40:48.164Z</lastmod>
-    <data>
-        <display>
-        <title>Android性能优化</title>
-        <pubTime>2016-05-21T02:42:16.000Z</pubTime>
-        
-        <tag>Android进阶</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2016/05/24/0010-adb-shell-monkey/</loc>
+    <loc>http://codingtrip.com/2016/05/24/0005-adb-shell-monkey/</loc>
     <lastmod>2016-11-29T01:40:48.164Z</lastmod>
     <data>
         <display>
@@ -279,27 +199,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2016/03/17/0005_Android%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87/</loc>
-    <lastmod>2016-11-29T01:40:48.163Z</lastmod>
-    <data>
-        <display>
-        <title>Androi屏幕分辨率（mdpi、hdpi、xdpi、xxdpi、xxxdpi）</title>
-        <pubTime>2016-03-17T12:29:04.000Z</pubTime>
-        
-        <tag>Android基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2015/08/20/0002_Hexo/</loc>
+    <loc>http://codingtrip.com/2015/08/20/0002_hexo/</loc>
     <lastmod>2016-11-29T01:40:48.162Z</lastmod>
     <data>
         <display>
@@ -319,27 +219,7 @@
 
     
   <url>
-    <loc>http://codingtrip.com/2015/09/15/0003_Android_Tips_001/</loc>
-    <lastmod>2016-11-29T01:40:48.162Z</lastmod>
-    <data>
-        <display>
-        <title>Android Tips(一)</title>
-        <pubTime>2015-09-15T03:42:14.000Z</pubTime>
-        
-        <tag>Android基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://codingtrip.com/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://codingtrip.com/2015/08/02/0001_makrdown%E5%85%A5%E9%97%A8/</loc>
+    <loc>http://codingtrip.com/2015/08/02/0001_makrdown/</loc>
     <lastmod>2016-11-29T01:40:48.161Z</lastmod>
     <data>
         <display>

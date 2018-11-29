@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程之旅" />
+  <meta name="keywords" content="Android Debug," />
 
 
 
@@ -86,15 +86,22 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="指尖码路">
-<meta property="og:url" content="http://codingtrip.com/tags/GitLab/index.html">
+<meta name="description" content="什么是Monkey?Monkey是我们在Android平台常用的一种压力测试方法，通过Monkey可模拟用户触摸，按键，滑动操作，常用于测试程序的稳定性。
+monkey是一个shell脚本，存放于：/system/bin/monkey使用如下命令: adb shell cat /system/bin/monkey 可以查看具体内容
+12345678910lcg@lcg-work-pc:~$ adb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="monkey命令">
+<meta property="og:url" content="http://codingtrip.com/2016/05/24/0005-adb-shell-monkey/index.html">
 <meta property="og:site_name" content="指尖码路">
-<meta property="og:description">
+<meta property="og:description" content="什么是Monkey?Monkey是我们在Android平台常用的一种压力测试方法，通过Monkey可模拟用户触摸，按键，滑动操作，常用于测试程序的稳定性。
+monkey是一个shell脚本，存放于：/system/bin/monkey使用如下命令: adb shell cat /system/bin/monkey 可以查看具体内容
+12345678910lcg@lcg-work-pc:~$ adb">
+<meta property="og:updated_time" content="2016-11-29T01:40:48.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="指尖码路">
-<meta name="twitter:description">
+<meta name="twitter:title" content="monkey命令">
+<meta name="twitter:description" content="什么是Monkey?Monkey是我们在Android平台常用的一种压力测试方法，通过Monkey可模拟用户触摸，按键，滑动操作，常用于测试程序的稳定性。
+monkey是一个shell脚本，存放于：/system/bin/monkey使用如下命令: adb shell cat /system/bin/monkey 可以查看具体内容
+12345678910lcg@lcg-work-pc:~$ adb">
 
 
 
@@ -112,7 +119,7 @@
   };
 </script>
 
-  <title> 标签: GitLab | 指尖码路 </title>
+  <title> monkey命令 | 指尖码路 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +150,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,53 +281,210 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        GitLab
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                monkey命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-24T17:30:26+08:00" content="2016-05-24">
+              2016-05-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/24/0005-adb-shell-monkey/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/24/0005-adb-shell-monkey/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/24/0005-adb-shell-monkey/" class="leancloud_visitors" data-flag-title="monkey命令">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h3 id="什么是Monkey"><a href="#什么是Monkey" class="headerlink" title="什么是Monkey?"></a>什么是Monkey?</h3><p>Monkey是我们在Android平台常用的一种压力测试方法，通过Monkey可模拟用户触摸，按键，滑动操作，常用于测试程序的稳定性。</p>
+<p>monkey是一个shell脚本，存放于：/system/bin/monkey<br>使用如下命令: adb shell cat /system/bin/monkey 可以查看具体内容</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lcg@lcg-work-pc:~$ adb <span class="built_in">shell</span> cat /<span class="keyword">system</span>/bin/monkey</span><br><span class="line">* daemon <span class="operator">not</span> running. starting <span class="keyword">it</span> now <span class="command"><span class="keyword">on</span> <span class="title">port</span> <span class="title">5037</span> *</span></span><br><span class="line">* daemon started successfully *</span><br><span class="line"><span class="comment"># Script to start "monkey" on the device, which has a very rudimentary</span></span><br><span class="line"><span class="comment"># shell.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">base=/<span class="keyword">system</span></span><br><span class="line">export CLASSPATH=$base/framework/monkey.jar</span><br><span class="line">trap <span class="string">""</span> HUP</span><br><span class="line">exec app_process $base/bin com.android.commands.monkey.Monkey $*</span><br></pre></td></tr></table></figure>
+<p>从上面内容可以看到，执行的时：/system/framework/monkey.jar　中内容．<br><a id="more"></a></p>
+<h3 id="Monkey命令"><a href="#Monkey命令" class="headerlink" title="Monkey命令"></a>Monkey命令</h3><p>查看帮助：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb　<span class="keyword">shell</span> monkey　－<span class="keyword">help</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">lcg@lcg-work-pc:~$ adb shell monkey -help</span><br><span class="line">usage: monkey <span class="comment">[-p ALLOWED_PACKAGE <span class="comment">[-p ALLOWED_PACKAGE]</span> ...]</span></span><br><span class="line">              <span class="comment">[-c MAIN_CATEGORY <span class="comment">[-c MAIN_CATEGORY]</span> ...]</span></span><br><span class="line">              <span class="comment">[--ignore-crashes]</span> <span class="comment">[--ignore-timeouts]</span></span><br><span class="line">              <span class="comment">[--ignore-security-exceptions]</span></span><br><span class="line">              <span class="comment">[--monitor-native-crashes]</span> <span class="comment">[--ignore-native-crashes]</span></span><br><span class="line">              <span class="comment">[--kill-process-after-error]</span> <span class="comment">[--hprof]</span></span><br><span class="line">              <span class="comment">[--pct-touch PERCENT]</span> <span class="comment">[--pct-motion PERCENT]</span></span><br><span class="line">              <span class="comment">[--pct-trackball PERCENT]</span> <span class="comment">[--pct-syskeys PERCENT]</span></span><br><span class="line">              <span class="comment">[--pct-nav PERCENT]</span> <span class="comment">[--pct-majornav PERCENT]</span></span><br><span class="line">              <span class="comment">[--pct-appswitch PERCENT]</span> <span class="comment">[--pct-flip PERCENT]</span></span><br><span class="line">              <span class="comment">[--pct-anyevent PERCENT]</span> <span class="comment">[--pct-pinchzoom PERCENT]</span></span><br><span class="line">              <span class="comment">[--pct-permission PERCENT]</span></span><br><span class="line">              <span class="comment">[--pkg-blacklist-file PACKAGE_BLACKLIST_FILE]</span></span><br><span class="line">              <span class="comment">[--pkg-whitelist-file PACKAGE_WHITELIST_FILE]</span></span><br><span class="line">              <span class="comment">[--wait-dbg]</span> <span class="comment">[--dbg-no-events]</span></span><br><span class="line">              <span class="comment">[--setup scriptfile]</span> <span class="comment">[-f scriptfile <span class="comment">[-f scriptfile]</span> ...]</span></span><br><span class="line">              <span class="comment">[--port port]</span></span><br><span class="line">              <span class="comment">[-s SEED]</span> <span class="comment">[-v <span class="comment">[-v]</span> ...]</span></span><br><span class="line">              <span class="comment">[--throttle MILLISEC]</span> <span class="comment">[--randomize-throttle]</span></span><br><span class="line">              <span class="comment">[--profile-wait MILLISEC]</span></span><br><span class="line">              <span class="comment">[--device-sleep-time MILLISEC]</span></span><br><span class="line">              <span class="comment">[--randomize-script]</span></span><br><span class="line">              <span class="comment">[--script-log]</span></span><br><span class="line">              <span class="comment">[--bugreport]</span></span><br><span class="line">              <span class="comment">[--periodic-bugreport]</span></span><br><span class="line">              <span class="comment">[--permission-target-system]</span></span><br><span class="line">              COUNT</span><br></pre></td></tr></table></figure>
+<p><strong>-p:</strong> 用于指定一个或者多个包，Monkey将只允许系统去访问这些包的activitys,如果应用需要访问其他包的activitys，连同这些包也一起指定在内．如果不指定任何包，Monkey默认可启动任何包的activitys．指定多个包，需要多次使用－p参数，一个－p参数对应一个包名,示例如下：</p>
+<pre><code>adb shell monkey -p com.android.monkeytest1 -p com.android.monkeytest2
+</code></pre><p><strong>-c:</strong> 用于指定一个或多个categories，Monkey将只能访问指定categories的activitys;如果未指定任何categories，将默认访问带有 Intent.CATEGORY_LAUNCHER 或　Intent.CATEGORY_MONKEY的activitys.指定多个categories的使用上与－p一致，一个参数对应一个categorie.<br><strong>［–ignore-crashes］:</strong> Monkey运行时忽略程序Crash或者异常信息未捕获，直到达到指定执行次数<br><strong>［–ignore-security-exceptions］:</strong> Monkey运行时忽略程序权限访问异常，直到达到指定执行次数<br><strong>［–monitor-native-crashes］:</strong>　观察并上报Android system native code异常<br><strong>［–kill-process-after-error］:</strong>  终止出现错误的进程<br><strong>［–pct-touch　PERCENT］:</strong>　调整touch事件（down-up event）比例<br><strong>［–pct-trackball　PERCENT］:</strong>　调整trackball事件（trackball事件：包含一个或多个随机动作，有时发生在点击事件之后）比例<br><strong>［–pct-nav　PERCENT］:</strong> 调整”basic” navigation事件比例. (Navigation事件即： 从可输入方向设备输入包含上／下／左／右方向事件.)<br><strong>［–pct-appswitch　PERCENT］:</strong> Monkey会在随机间隔时间，通过调用startActivity()来保证最大化覆盖包内所有activitys<br><strong>［–pct-anyevent　PERCENT］:</strong>　调整所有其他类型事件的比例，包括按键事件，其他在设备上很少使用的按钮等等<br><strong>［–pct-permission　PERCENT］:</strong>　<br><strong>［–pkg-blacklist-file　PACKAGE_BLACKLIST_FILE］:</strong>　执行黑名单以外的应用<br><strong>［–pkg-whitelist-file　PACKAGE_WHITELIST_FILE］:</strong>　执行白名单以外的应用<br><strong>［–wait-dbg］:</strong>　停止执行中的Monkey，直到有调试器和它相连接<br><strong>［–setup scriptfile］:</strong>　执行按照一定的语法规则编写有序的用户事件流并适用于monkey命令工具的脚本。<br><strong>［–port port］:</strong>　为monkey开启专用端口<br><strong>［-s SEED］:</strong>　随机数生成器的seed值。如果使用相同的seed值再次运行monkey，它将生成相同的事件序列<br><strong>［–throttle MILLISEC］:</strong>　设置每一次有效执行事件后休眠时间<br><strong>［–profile-wait MILLISEC］:</strong><br><strong>［–device-sleep-time MILLISEC］:</strong>　设备休眠时间<br><strong>［–randomize-script］:</strong>　monkey脚本内容随机执行<br><strong>［–script-log］:</strong>　输出monkey脚本log<br><strong>［–bugreport］:</strong> 设置Monkey运行时自动记录发生crash，anr，system not responding的错误信息。<br><strong>［–periodic-bugreport］:</strong><br><strong>［–permission-target-system］:</strong><br><strong>［COUNT］:</strong>　Monkey执行次数  </p>
+<p>参考自：<a href="https://developer.android.com/studio/test/monkey.html" target="_blank" rel="external">https://developer.android.com/studio/test/monkey.html</a></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/05/18/0003_gitlab_use/" itemprop="url">
-              
-                <span itemprop="name">Gitlab 使用</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-18T19:07:10+08:00"
-              content="2016-05-18" >
-          05-18
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android-Debug/" rel="tag">#Android Debug</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/19/0004_unit_test/" rel="next" title="单元测试实践-android">
+                <i class="fa fa-chevron-left"></i> 单元测试实践-android
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/22/0006-adb-shell-svc/" rel="prev" title="svc命令">
+                svc命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/24/0005-adb-shell-monkey/"
+           data-title="monkey命令" data-url="http://codingtrip.com/2016/05/24/0005-adb-shell-monkey/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -340,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/author.jpg"
@@ -440,6 +613,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Monkey"><span class="nav-number">1.</span> <span class="nav-text">什么是Monkey?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Monkey命令"><span class="nav-number">2.</span> <span class="nav-text">Monkey命令</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -541,6 +725,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

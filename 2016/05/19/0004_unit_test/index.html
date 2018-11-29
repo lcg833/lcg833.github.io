@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="Android基础," />
 
 
 
@@ -86,19 +86,33 @@
 
 
 
-<meta name="description" content="Hexo备份选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。
-推荐一个插件：hexo-git-backup，使用简单方便。">
+<meta name="description" content="概述单元测试是最基础的测试，有效的单元测试将直接提升产品质量。软件开发工程师应当将编写和运行测试作为开发过程的一部分，良好的单元测试能够在开发早期发现软件缺陷，让工程师对自己写的代码感到自信。本文将描述如何使用JUnit4框架在Android工程中进行单元测试，开发环境为Android Studio，Android中有两种单元测试：Local Unit Tests和Instrumented Tes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://codingtrip.com/2015/08/20/0002_hexo/index.html">
+<meta property="og:title" content="单元测试实践-android">
+<meta property="og:url" content="http://codingtrip.com/2016/05/19/0004_unit_test/index.html">
 <meta property="og:site_name" content="指尖码路">
-<meta property="og:description" content="Hexo备份选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。
-推荐一个插件：hexo-git-backup，使用简单方便。">
-<meta property="og:updated_time" content="2016-11-29T01:40:48.162Z">
+<meta property="og:description" content="概述单元测试是最基础的测试，有效的单元测试将直接提升产品质量。软件开发工程师应当将编写和运行测试作为开发过程的一部分，良好的单元测试能够在开发早期发现软件缺陷，让工程师对自己写的代码感到自信。本文将描述如何使用JUnit4框架在Android工程中进行单元测试，开发环境为Android Studio，Android中有两种单元测试：Local Unit Tests和Instrumented Tes">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%871.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%872.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%873.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%874.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%875.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%876.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%877.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%878.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%879.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8710.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8711.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8712.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8713.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8714.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8715.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8716.png">
+<meta property="og:image" content="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8717.png">
+<meta property="og:updated_time" content="2016-11-29T01:40:48.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo备份选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。
-推荐一个插件：hexo-git-backup，使用简单方便。">
+<meta name="twitter:title" content="单元测试实践-android">
+<meta name="twitter:description" content="概述单元测试是最基础的测试，有效的单元测试将直接提升产品质量。软件开发工程师应当将编写和运行测试作为开发过程的一部分，良好的单元测试能够在开发早期发现软件缺陷，让工程师对自己写的代码感到自信。本文将描述如何使用JUnit4框架在Android工程中进行单元测试，开发环境为Android Studio，Android中有两种单元测试：Local Unit Tests和Instrumented Tes">
 
 
 
@@ -116,7 +130,7 @@
   };
 </script>
 
-  <title> Hexo | 指尖码路 </title>
+  <title> 单元测试实践-android | 指尖码路 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -299,7 +313,7 @@
             
             
               
-                Hexo
+                单元测试实践-android
               
             
           </h1>
@@ -311,8 +325,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-08-20T14:47:37+08:00" content="2015-08-20">
-              2015-08-20
+            <time itemprop="dateCreated" datetime="2016-05-19T19:01:45+08:00" content="2016-05-19">
+              2016-05-19
             </time>
           </span>
 
@@ -325,8 +339,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
                   </a>
                 </span>
 
@@ -341,8 +355,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/08/20/0002_hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/20/0002_hexo/" itemprop="commentsCount"></span>
+                <a href="/2016/05/19/0004_unit_test/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/0004_unit_test/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -352,7 +366,7 @@
 
           
           
-             <span id="/2015/08/20/0002_hexo/" class="leancloud_visitors" data-flag-title="Hexo">
+             <span id="/2016/05/19/0004_unit_test/" class="leancloud_visitors" data-flag-title="单元测试实践-android">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,15 +388,63 @@
       
 
       
-        <h2 id="Hexo备份"><a href="#Hexo备份" class="headerlink" title="Hexo备份"></a>Hexo备份</h2><p>选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息<br>，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。</p>
-<p>推荐一个插件：<a href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="external">hexo-git-backup</a>，使用简单方便。<br><a id="more"></a></p>
-<p>安装：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-git-<span class="keyword">backup</span></span></span><br></pre></td></tr></table></figure></p>
-<p>修改站点配置文件_config.yml，加入以下内容：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">backup</span>:</span><br><span class="line">    <span class="attribute">type</span>: git</span><br><span class="line">    <span class="attribute">repository</span>:</span><br><span class="line">       <span class="attribute">oschina</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:xxx/xxx.git,branchName</span><br><span class="line">       <span class="attribute">coding</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:xxx/xxx.git,branchName</span><br></pre></td></tr></table></figure></p>
-<p>提交备份：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> b</span><br></pre></td></tr></table></figure></p>
-<p>如果想在其他机器上写博客，只需将仓库克隆，切换到站点目录下运行：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="hexo-g报错-Hexo-3-2-0版本-：Cannot-read-property-‘updated’-of-undefined"><a href="#hexo-g报错-Hexo-3-2-0版本-：Cannot-read-property-‘updated’-of-undefined" class="headerlink" title="hexo g报错(Hexo: 3.2.0版本)：Cannot read property ‘updated’ of undefined"></a>hexo g报错(Hexo: 3.2.0版本)：Cannot read property ‘updated’ of undefined</h2><p>hexo升级为3.2.0版本之后，hexo g报错：<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">FATAL ejs:7</span><br><span class="line">    5|   <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> encodeURI(feed_url) </span>%&gt;<span class="xml"><span class="tag"><span class="value">"</span> <span class="attribute">rel</span>=<span class="value">"self"</span>/&gt;</span></span><br><span class="line">    6|   <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> encodeURI(url) </span>%&gt;<span class="xml"><span class="tag"><span class="value">"</span>/&gt;</span></span><br><span class="line"> &gt;&gt; 7|   <span class="tag">&lt;<span class="title">updated</span>&gt;</span></span>&lt;%=<span class="ruby"> posts.first().updated.toISOString() </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">updated</span>&gt;</span></span><br><span class="line">    8|   <span class="tag">&lt;<span class="title">id</span>&gt;</span></span>&lt;%-<span class="ruby"> url </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">id</span>&gt;</span></span><br><span class="line">    9|   </span>&lt;%<span class="ruby"> <span class="keyword">if</span> (config.author)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">    10|   <span class="tag">&lt;<span class="title">author</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Cannot read property 'updated' of undefined</span></span><br></pre></td></tr></table></figure></p>
-<p>打开站点根目录文件：package.json，修改”dependencies”中hexo版本为：3.1.1，删除node_modules文件夹，重新运行：npm install<br>修改前：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"hexo-site"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"0.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">private</span>": <span class="value"><span class="literal">true</span></span>,</span><br><span class="line">  "<span class="attribute">hexo</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">version</span>": <span class="value"><span class="string">"3.2.0"</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">dependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">hexo</span>": <span class="value"><span class="string">"^3.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-deployer-git</span>": <span class="value"><span class="string">"0.0.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-archive</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-category</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-feed</span>": <span class="value"><span class="string">"~1.0.3"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-index</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-search</span>": <span class="value"><span class="string">"^1.0.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-sitemap</span>": <span class="value"><span class="string">"~1.0.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-tag</span>": <span class="value"><span class="string">"^0.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-git-backup</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-ejs</span>": <span class="value"><span class="string">"^0.1.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-marked</span>": <span class="value"><span class="string">"^0.2.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-stylus</span>": <span class="value"><span class="string">"^0.2.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-server</span>": <span class="value"><span class="string">"^0.1.3"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>修改后：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"hexo-site"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"0.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">private</span>": <span class="value"><span class="literal">true</span></span>,</span><br><span class="line">  "<span class="attribute">hexo</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">version</span>": <span class="value"><span class="string">"3.2.0"</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">dependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">hexo</span>": <span class="value"><span class="string">"3.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-deployer-git</span>": <span class="value"><span class="string">"0.0.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-archive</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-category</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-feed</span>": <span class="value"><span class="string">"~1.0.3"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-index</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-search</span>": <span class="value"><span class="string">"^1.0.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-sitemap</span>": <span class="value"><span class="string">"~1.0.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-tag</span>": <span class="value"><span class="string">"^0.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-git-backup</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-ejs</span>": <span class="value"><span class="string">"^0.1.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-marked</span>": <span class="value"><span class="string">"^0.2.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-stylus</span>": <span class="value"><span class="string">"^0.2.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-server</span>": <span class="value"><span class="string">"^0.1.3"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>单元测试是最基础的测试，有效的单元测试将直接提升产品质量。软件开发工程师应当将编写和运行测试作为开发过程的一部分，<br>良好的单元测试能够在开发早期发现软件缺陷，让工程师对自己写的代码感到自信。<br>本文将描述如何使用JUnit4框架在Android工程中进行单元测试，开发环境为Android Studio，Android中有两种单元测试：<br>Local Unit Tests和Instrumented Tests，Instrumented Tests依赖于设备，可进行单元、组件、界面测试，<br>本文重点描述如何进行本地单元测试（Local Unit Tests）。<br>注：文中提到的例子在Google Samples的BasicSample基础上进行了部分修改。<br><a id="more"></a></p>
+<h2 id="单元测试组成"><a href="#单元测试组成" class="headerlink" title="单元测试组成"></a>单元测试组成</h2><h3 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h3><p>使用版本管理控制软件，推荐使用git，目前最好的版本控制软件，没有之一。<br><a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
+<h3 id="构建管理工具"><a href="#构建管理工具" class="headerlink" title="构建管理工具"></a>构建管理工具</h3><p>Android Studio默认集成工具为gradle。<br><a href="https://docs.gradle.org/current/userguide/userguide.html" target="_blank" rel="external">https://docs.gradle.org/current/userguide/userguide.html</a></p>
+<h3 id="测试框架"><a href="#测试框架" class="headerlink" title="测试框架"></a>测试框架</h3><p>单元测试框架junit4<br><a href="http://junit.org/junit4/" target="_blank" rel="external">http://junit.org/junit4/</a></p>
+<p>模拟对象框架mockito<br><a href="http://mockito.org/" target="_blank" rel="external">http://mockito.org/</a></p>
+<p>模拟真机功能Robolectric。<br><a href="http://robolectric.org/" target="_blank" rel="external">http://robolectric.org/</a></p>
+<h3 id="持续集成平台"><a href="#持续集成平台" class="headerlink" title="持续集成平台"></a>持续集成平台</h3><p>自动化构建工具，推荐使用jenkins。<br><a href="https://jenkins.io/index.html" target="_blank" rel="external">https://jenkins.io/index.html</a></p>
+<h2 id="Android单元测试介绍"><a href="#Android单元测试介绍" class="headerlink" title="Android单元测试介绍"></a>Android单元测试介绍</h2><h3 id="单元测试目录"><a href="#单元测试目录" class="headerlink" title="单元测试目录"></a>单元测试目录</h3><p>工程目录app-&gt;src-&gt;test目录</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%871.png" alt="UnitTest"><br></div>
+
+<h3 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h3><p>在工程app/build.gralde文件中增加如下依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    // Unit testing dependencies.</span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'junit:junit:4.12'</span></span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'org.mockito:mockito-core:1.10.19'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="添加代码覆盖率支持"><a href="#添加代码覆盖率支持" class="headerlink" title="添加代码覆盖率支持"></a>添加代码覆盖率支持</h3><p>增加jacoco支持<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'jacoco'</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ependencies &#123;</span><br><span class="line">    // Unit testing dependencies.</span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'junit:junit:4.12'</span></span><br><span class="line">    <span class="built_in">test</span>Compile <span class="string">'org.mockito:mockito-core:1.10.19'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>// 增加jacoco，工具版本可以根据最新版本进行修改<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">jacoco</span> &#123;</span><br><span class="line">    <span class="title">toolVersion</span> = <span class="string">"0.7.6.201602180812"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="增加覆盖率统计和Lint选项"><a href="#增加覆盖率统计和Lint选项" class="headerlink" title="增加覆盖率统计和Lint选项"></a>增加覆盖率统计和Lint选项</h3><p>Android节点buildTypes增加testCoverageEnabled = true<br>Lint选项设置为遇到错误不终止。<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">android</span> &#123;</span><br><span class="line">    compileSdkVersion <span class="number">23</span></span><br><span class="line">    buildToolsVersion <span class="string">'23.0.2'</span></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        applicationId <span class="string">"com.example.android.testing.unittesting.BasicSample"</span></span><br><span class="line">        minSdkVersion <span class="number">8</span></span><br><span class="line">        versionCode <span class="number">1</span></span><br><span class="line">        versionName <span class="string">"1.0"</span></span><br><span class="line">        targetSdkVersion <span class="number">23</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="name">buildTypes</span> &#123;</span><br><span class="line">        debug &#123;</span><br><span class="line">            testCoverageEnabled = <span class="keyword">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="name">productFlavors</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="name">lintOptions</span> &#123;</span><br><span class="line">        // I prefer avoiding a build fail <span class="keyword">if</span> there is any warning, for they are only warnings</span><br><span class="line">        abortOnError <span class="keyword">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="图形化运行单元测试工具"><a href="#图形化运行单元测试工具" class="headerlink" title="图形化运行单元测试工具"></a>图形化运行单元测试工具</h3><p>android studio自动集成了单元测试覆盖率统计工具，选中编写好的测试类，右键点击Run ‘XXXXXX’ with Coverage。</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%872.png" alt="UnitTest"><br></div>
+
+<h3 id="查看覆盖率"><a href="#查看覆盖率" class="headerlink" title="查看覆盖率"></a>查看覆盖率</h3><p>出现覆盖率面板，按F4或双击相关行，可以打开源代码查看具体哪些行没有覆盖到。</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%873.png" alt="UnitTest"><br></div>
+
+<h3 id="查看代码覆盖情况"><a href="#查看代码覆盖情况" class="headerlink" title="查看代码覆盖情况"></a>查看代码覆盖情况</h3><p>两种颜色表明覆盖和未覆盖两种状态，此时开发工程师应当分析是否需要增加新的测试代码对未进行测试的语句行覆盖。</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%874.png" alt="UnitTest"><br></div>
+
+<h2 id="Jenkins配置说明"><a href="#Jenkins配置说明" class="headerlink" title="Jenkins配置说明"></a>Jenkins配置说明</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%875.png" alt="UnitTest"><br></div>
+
+<h3 id="配置仓库"><a href="#配置仓库" class="headerlink" title="配置仓库"></a>配置仓库</h3><p>推荐使用git，目前最好的版本控制软件，没有之一。</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%876.png" alt="UnitTest"><br></div>
+
+<h3 id="构建触发器"><a href="#构建触发器" class="headerlink" title="构建触发器"></a>构建触发器</h3><p>一般选择定时检测版本库，有提交就自动构建。</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%877.png" alt="UnitTest"><br></div>
+
+<h3 id="增加构建Gradle命令"><a href="#增加构建Gradle命令" class="headerlink" title="增加构建Gradle命令"></a>增加构建Gradle命令</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%878.png" alt="UnitTest"><br></div>
+
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%879.png" alt="UnitTest"><br></div>
+
+<h3 id="构建后操作-增加Lint结果"><a href="#构建后操作-增加Lint结果" class="headerlink" title="构建后操作-增加Lint结果"></a>构建后操作-增加Lint结果</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8710.png" alt="UnitTest"><br></div>
+
+<p>在Lint files项填入**/app/build/outputs/lint-results-debug.xml</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8711.png" alt="UnitTest"><br></div>
+
+<h3 id="构建后操作-增加JUnit测试报告"><a href="#构建后操作-增加JUnit测试报告" class="headerlink" title="构建后操作-增加JUnit测试报告"></a>构建后操作-增加JUnit测试报告</h3><p>在测试报告项填入<strong>/build/test-results/</strong>/*.xml</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8712.png" alt="UnitTest"><br></div>
+
+<h3 id="构建后操作-增加覆盖率报告"><a href="#构建后操作-增加覆盖率报告" class="headerlink" title="构建后操作-增加覆盖率报告"></a>构建后操作-增加覆盖率报告</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Path to exec files项增加<span class="keyword">*</span><span class="keyword">*</span>/build/jacoco/<span class="keyword">*</span>.exec</span><br><span class="line">Path to class directories项增加<span class="keyword">*</span><span class="keyword">*</span>/build/intermediates/classes</span><br><span class="line">Path to source directories增加<span class="keyword">*</span><span class="keyword">*</span>/src/main/java</span><br><span class="line">Exclusions项增加：</span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>/R.class, <span class="keyword">*</span><span class="keyword">*</span>/R$<span class="keyword">*</span>.class, <span class="keyword">*</span><span class="keyword">*</span>/<span class="keyword">*</span>$ViewInjector<span class="keyword">*</span>.<span class="keyword">*</span>,<span class="keyword">*</span><span class="keyword">*</span>/BuildConfig.<span class="keyword">*</span>,<span class="keyword">*</span><span class="keyword">*</span>/Manifest<span class="keyword">*</span>.<span class="keyword">*</span></span><br></pre></td></tr></table></figure>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8713.png" alt="UnitTest"><br></div>
+
+<h3 id="邮件通知"><a href="#邮件通知" class="headerlink" title="邮件通知"></a>邮件通知</h3><p>填写接收构建失败邮件的邮箱地址，需要确认在Jenkins的系统管理中增加了邮件服务器和管理员的配置。</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8714.png" alt="UnitTest"><br></div>
+
+<h3 id="自动集成效果"><a href="#自动集成效果" class="headerlink" title="自动集成效果"></a>自动集成效果</h3><div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8715.png" alt="UnitTest"><br></div>
+
+<p>点击各目录可查看详细的问题信息</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8716.png" alt="UnitTest"><br></div>
+
+<p>点击文件名可查看具体的代码行覆盖情况</p>
+<div align="left"><br><img src="http://o7ig1vigz.bkt.clouddn.com/android/unit_test/%E5%9B%BE%E7%89%8717.png" alt="UnitTest"><br></div>
 
       
     </div>
@@ -404,7 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/Android基础/" rel="tag">#Android基础</a>
           
         </div>
       
@@ -413,16 +475,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/02/0001_makrdown/" rel="next" title="MarkDown 基础知识学习">
-                <i class="fa fa-chevron-left"></i> MarkDown 基础知识学习
+              <a href="/2016/05/18/0003_gitlab_use/" rel="next" title="Gitlab 使用">
+                <i class="fa fa-chevron-left"></i> Gitlab 使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/18/0003_gitlab_use/" rel="prev" title="Gitlab 使用">
-                Gitlab 使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/24/0005-adb-shell-monkey/" rel="prev" title="monkey命令">
+                monkey命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -475,8 +537,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/08/20/0002_hexo/"
-           data-title="Hexo" data-url="http://codingtrip.com/2015/08/20/0002_hexo/">
+      <div class="ds-thread" data-thread-key="2016/05/19/0004_unit_test/"
+           data-title="单元测试实践-android" data-url="http://codingtrip.com/2016/05/19/0004_unit_test/">
       </div>
     
   </div>
@@ -616,7 +678,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo备份"><span class="nav-number">1.</span> <span class="nav-text">Hexo备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-g报错-Hexo-3-2-0版本-：Cannot-read-property-‘updated’-of-undefined"><span class="nav-number">2.</span> <span class="nav-text">hexo g报错(Hexo: 3.2.0版本)：Cannot read property ‘updated’ of undefined</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单元测试组成"><span class="nav-number">2.</span> <span class="nav-text">单元测试组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置管理"><span class="nav-number">2.1.</span> <span class="nav-text">配置管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建管理工具"><span class="nav-number">2.2.</span> <span class="nav-text">构建管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试框架"><span class="nav-number">2.3.</span> <span class="nav-text">测试框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#持续集成平台"><span class="nav-number">2.4.</span> <span class="nav-text">持续集成平台</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android单元测试介绍"><span class="nav-number">3.</span> <span class="nav-text">Android单元测试介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单元测试目录"><span class="nav-number">3.1.</span> <span class="nav-text">单元测试目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加依赖"><span class="nav-number">3.2.</span> <span class="nav-text">添加依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加代码覆盖率支持"><span class="nav-number">3.3.</span> <span class="nav-text">添加代码覆盖率支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加覆盖率统计和Lint选项"><span class="nav-number">3.4.</span> <span class="nav-text">增加覆盖率统计和Lint选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图形化运行单元测试工具"><span class="nav-number">3.5.</span> <span class="nav-text">图形化运行单元测试工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看覆盖率"><span class="nav-number">3.6.</span> <span class="nav-text">查看覆盖率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看代码覆盖情况"><span class="nav-number">3.7.</span> <span class="nav-text">查看代码覆盖情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins配置说明"><span class="nav-number">4.</span> <span class="nav-text">Jenkins配置说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目"><span class="nav-number">4.1.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置仓库"><span class="nav-number">4.2.</span> <span class="nav-text">配置仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建触发器"><span class="nav-number">4.3.</span> <span class="nav-text">构建触发器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增加构建Gradle命令"><span class="nav-number">4.4.</span> <span class="nav-text">增加构建Gradle命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建后操作-增加Lint结果"><span class="nav-number">4.5.</span> <span class="nav-text">构建后操作-增加Lint结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建后操作-增加JUnit测试报告"><span class="nav-number">4.6.</span> <span class="nav-text">构建后操作-增加JUnit测试报告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建后操作-增加覆盖率报告"><span class="nav-number">4.7.</span> <span class="nav-text">构建后操作-增加覆盖率报告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮件通知"><span class="nav-number">4.8.</span> <span class="nav-text">邮件通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动集成效果"><span class="nav-number">4.9.</span> <span class="nav-text">自动集成效果</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

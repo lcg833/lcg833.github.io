@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="编程之旅" />
+  <meta name="keywords" content="Android Debug," />
 
 
 
@@ -86,15 +86,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="指尖码路">
-<meta property="og:url" content="http://codingtrip.com/tags/GitLab/index.html">
+<meta name="description" content="什么是svc命令svc是Android的一个脚本命令，在/system/bin目录下，我们通过cat命令可查看其详细信息：1234567caigandeMacBook-Pro:~ lcg$ adb shell cat /system/bin/svc# Script to start &quot;am&quot; on the device, which has a very rudimentary# shell.#b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="svc命令">
+<meta property="og:url" content="http://codingtrip.com/2016/06/22/0006-adb-shell-svc/index.html">
 <meta property="og:site_name" content="指尖码路">
-<meta property="og:description">
+<meta property="og:description" content="什么是svc命令svc是Android的一个脚本命令，在/system/bin目录下，我们通过cat命令可查看其详细信息：1234567caigandeMacBook-Pro:~ lcg$ adb shell cat /system/bin/svc# Script to start &quot;am&quot; on the device, which has a very rudimentary# shell.#b">
+<meta property="og:updated_time" content="2016-11-29T01:40:48.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="指尖码路">
-<meta name="twitter:description">
+<meta name="twitter:title" content="svc命令">
+<meta name="twitter:description" content="什么是svc命令svc是Android的一个脚本命令，在/system/bin目录下，我们通过cat命令可查看其详细信息：1234567caigandeMacBook-Pro:~ lcg$ adb shell cat /system/bin/svc# Script to start &quot;am&quot; on the device, which has a very rudimentary# shell.#b">
 
 
 
@@ -112,7 +113,7 @@
   };
 </script>
 
-  <title> 标签: GitLab | 指尖码路 </title>
+  <title> svc命令 | 指尖码路 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,53 +275,214 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        GitLab
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                svc命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-22T21:57:10+08:00" content="2016-06-22">
+              2016-06-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/22/0006-adb-shell-svc/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/22/0006-adb-shell-svc/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/22/0006-adb-shell-svc/" class="leancloud_visitors" data-flag-title="svc命令">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="什么是svc命令"><a href="#什么是svc命令" class="headerlink" title="什么是svc命令"></a>什么是svc命令</h2><p>svc是Android的一个脚本命令，在/system/bin目录下，我们通过cat命令可查看其详细信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">caigandeMacBook-Pro:~ lcg$ adb shell cat /system/bin/svc</span><br><span class="line"><span class="comment"># Script to start "am" on the device, which has a very rudimentary</span></span><br><span class="line"><span class="comment"># shell.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">base=/system</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=<span class="variable">$base</span>/framework/svc.jar</span><br><span class="line"><span class="built_in">exec</span> app_process <span class="variable">$base</span>/bin com.android.commands.svc.Svc $*</span><br></pre></td></tr></table></figure></p>
+<p>通过-h参数可查看所有命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">caigandeMacBook-Pro:~ lcg$ adb shell svc -h</span><br><span class="line">Available commands:</span><br><span class="line">    <span class="operator"><span class="keyword">help</span>     <span class="keyword">Show</span> information about the subcommands</span><br><span class="line">    <span class="keyword">power</span>    Control the <span class="keyword">power</span> manager</span><br><span class="line">    <span class="keyword">data</span>     Control mobile <span class="keyword">data</span> connectivity</span><br><span class="line">    wifi     Control the Wi-Fi manager</span><br><span class="line">    usb      Control Usb state</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="svc-power-控制电源管理"><a href="#svc-power-控制电源管理" class="headerlink" title="svc power:控制电源管理"></a>svc power:控制电源管理</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">shell</span>@mx2:/ $ svc power -h</span><br><span class="line">Control <span class="operator">the</span> power manager</span><br><span class="line"></span><br><span class="line">usage: svc power stayon [<span class="constant">true</span>|<span class="constant">false</span>|usb|ac|wireless]</span><br><span class="line">         Set <span class="operator">the</span> <span class="string">'keep awake while plugged in'</span> setting.</span><br><span class="line">       svc power reboot [reason]</span><br><span class="line">         Perform <span class="operator">a</span> runtime shutdown <span class="operator">and</span> reboot device <span class="operator">with</span> specified reason.</span><br><span class="line">       svc power shutdown</span><br><span class="line">         Perform <span class="operator">a</span> runtime shutdown <span class="operator">and</span> power off <span class="operator">the</span> device.</span><br></pre></td></tr></table></figure>
+<p><strong>svc power stayon [true|false|usb|ac|wireless]</strong>: 设置保持唤醒状态<br>1.true:常亮，相当于设置了所有标记(usb, ac, wireless)<br>2.false：清除所有标记<br>3.usb:插入usb时常亮<br>4.ac:充电时常亮<br>5.wireless：无线充电时常亮<br>当设置usb/ac/wireless其中一个标记时，会清除其余标记  </p>
+<p><strong>svc power reboot [reason]</strong>: 设置设备在特定条件下关机并重启  </p>
+<p><strong>svc power shutdown</strong>: 设置设备关机  </p>
+<h3 id="svc-data-控制设备数据连接"><a href="#svc-data-控制设备数据连接" class="headerlink" title="svc data:控制设备数据连接"></a>svc data:控制设备数据连接</h3><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">shell</span>@mx2:/ $ svc <span class="typedef"><span class="keyword">data</span> -h</span></span><br><span class="line"><span class="type">Control</span> mobile <span class="typedef"><span class="keyword">data</span> connectivity</span></span><br><span class="line"></span><br><span class="line"><span class="title">usage</span>: svc <span class="typedef"><span class="keyword">data</span> [enable|disable]</span></span><br><span class="line">         <span class="type">Turn</span> mobile <span class="typedef"><span class="keyword">data</span> on or off.</span></span><br></pre></td></tr></table></figure>
+<p><strong>svc data [enable|disable]</strong>:控制设备数据连接开与关</p>
+<h3 id="svc-wifi-控制wifi管理"><a href="#svc-wifi-控制wifi管理" class="headerlink" title="svc wifi:控制wifi管理"></a>svc wifi:控制wifi管理</h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shell<span class="property">@mx2</span>:/ $ svc wifi -h</span><br><span class="line">Control the Wi-Fi manager</span><br><span class="line"></span><br><span class="line"><span class="attribute">usage</span>: svc wifi [enable|disable]</span><br><span class="line">         Turn Wi-Fi <span class="literal">on</span> <span class="keyword">or</span> <span class="literal">off</span>.</span><br></pre></td></tr></table></figure>
+<p><strong>svc wifi [enable|disable]</strong>:控制wifi开与关</p>
+<h3 id="svc-usb-控制usb状态"><a href="#svc-usb-控制usb状态" class="headerlink" title="svc usb:控制usb状态"></a>svc usb:控制usb状态</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">shell</span>@mx2:/ $ svc usb -h</span><br><span class="line">Control Usb state</span><br><span class="line"></span><br><span class="line">usage: svc usb setFunction [<span class="function"><span class="keyword">function</span>]</span></span><br><span class="line">         Set <span class="operator">the</span> current usb <span class="function"><span class="keyword">function</span>.</span></span><br><span class="line"></span><br><span class="line">       svc usb getFunction</span><br><span class="line">          Gets <span class="operator">the</span> list <span class="operator">of</span> currently enabled functions</span><br></pre></td></tr></table></figure>
+<p><strong>svc usb setFunction [function]</strong>:设置当前USB功能<br>其中［function］包括：mtp,adb等  </p>
+<p><strong>svc usb getFunction</strong>:获取当前可用功能列表</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/05/18/0003_gitlab_use/" itemprop="url">
-              
-                <span itemprop="name">Gitlab 使用</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-18T19:07:10+08:00"
-              content="2016-05-18" >
-          05-18
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android-Debug/" rel="tag">#Android Debug</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/24/0005-adb-shell-monkey/" rel="next" title="monkey命令">
+                <i class="fa fa-chevron-left"></i> monkey命令
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/23/0007-adb-shell-am/" rel="prev" title="am命令">
+                am命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/22/0006-adb-shell-svc/"
+           data-title="svc命令" data-url="http://codingtrip.com/2016/06/22/0006-adb-shell-svc/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -340,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/author.jpg"
@@ -440,6 +611,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是svc命令"><span class="nav-number">1.</span> <span class="nav-text">什么是svc命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#svc-power-控制电源管理"><span class="nav-number">1.1.</span> <span class="nav-text">svc power:控制电源管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svc-data-控制设备数据连接"><span class="nav-number">1.2.</span> <span class="nav-text">svc data:控制设备数据连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svc-wifi-控制wifi管理"><span class="nav-number">1.3.</span> <span class="nav-text">svc wifi:控制wifi管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svc-usb-控制usb状态"><span class="nav-number">1.4.</span> <span class="nav-text">svc usb:控制usb状态</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -541,6 +723,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="AOSP," />
 
 
 
@@ -86,19 +86,22 @@
 
 
 
-<meta name="description" content="Hexo备份选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。
-推荐一个插件：hexo-git-backup，使用简单方便。">
+<meta name="description" content="android源码的获取和编译教程，Google官方有详细的教程，建议直接看官方教程，链接如下：https://source.android.com/source/requirements.html
+编译环境要求先介绍下我的电脑基础环境：1.硬件：MacBook Pro2.系统版本：OS X EI Capitan 10.11.6
+一、系统版本要求以下是官方给出的各个android版本建议对应的系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://codingtrip.com/2015/08/20/0002_hexo/index.html">
+<meta property="og:title" content="在Mac OS中获取和编译android源码(AOSP)">
+<meta property="og:url" content="http://codingtrip.com/2016/08/26/0009-mac-aosp/index.html">
 <meta property="og:site_name" content="指尖码路">
-<meta property="og:description" content="Hexo备份选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。
-推荐一个插件：hexo-git-backup，使用简单方便。">
-<meta property="og:updated_time" content="2016-11-29T01:40:48.162Z">
+<meta property="og:description" content="android源码的获取和编译教程，Google官方有详细的教程，建议直接看官方教程，链接如下：https://source.android.com/source/requirements.html
+编译环境要求先介绍下我的电脑基础环境：1.硬件：MacBook Pro2.系统版本：OS X EI Capitan 10.11.6
+一、系统版本要求以下是官方给出的各个android版本建议对应的系统">
+<meta property="og:updated_time" content="2016-11-29T01:40:48.165Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Hexo备份选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。
-推荐一个插件：hexo-git-backup，使用简单方便。">
+<meta name="twitter:title" content="在Mac OS中获取和编译android源码(AOSP)">
+<meta name="twitter:description" content="android源码的获取和编译教程，Google官方有详细的教程，建议直接看官方教程，链接如下：https://source.android.com/source/requirements.html
+编译环境要求先介绍下我的电脑基础环境：1.硬件：MacBook Pro2.系统版本：OS X EI Capitan 10.11.6
+一、系统版本要求以下是官方给出的各个android版本建议对应的系统">
 
 
 
@@ -116,7 +119,7 @@
   };
 </script>
 
-  <title> Hexo | 指尖码路 </title>
+  <title> 在Mac OS中获取和编译android源码(AOSP) | 指尖码路 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -299,7 +302,7 @@
             
             
               
-                Hexo
+                在Mac OS中获取和编译android源码(AOSP)
               
             
           </h1>
@@ -311,38 +314,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-08-20T14:47:37+08:00" content="2015-08-20">
-              2015-08-20
+            <time itemprop="dateCreated" datetime="2016-08-26T21:49:10+08:00" content="2016-08-26">
+              2016-08-26
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/08/20/0002_hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/20/0002_hexo/" itemprop="commentsCount"></span>
+                <a href="/2016/08/26/0009-mac-aosp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/0009-mac-aosp/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -352,7 +336,7 @@
 
           
           
-             <span id="/2015/08/20/0002_hexo/" class="leancloud_visitors" data-flag-title="Hexo">
+             <span id="/2016/08/26/0009-mac-aosp/" class="leancloud_visitors" data-flag-title="在Mac OS中获取和编译android源码(AOSP)">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,15 +358,37 @@
       
 
       
-        <h2 id="Hexo备份"><a href="#Hexo备份" class="headerlink" title="Hexo备份"></a>Hexo备份</h2><p>选择第三方git代码托管服务商进行备份，如github,coding,oschina等，我选择的是oschina和coding,因为你的站点配置文件或者主题配置文件中可能会涉及一些私密信息<br>，为了相对安全性，最好选择私有仓库进行备份，oschina和coding目前可建立免费的私有仓库。</p>
-<p>推荐一个插件：<a href="https://github.com/coneycode/hexo-git-backup" target="_blank" rel="external">hexo-git-backup</a>，使用简单方便。<br><a id="more"></a></p>
-<p>安装：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-git-<span class="keyword">backup</span></span></span><br></pre></td></tr></table></figure></p>
-<p>修改站点配置文件_config.yml，加入以下内容：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">backup</span>:</span><br><span class="line">    <span class="attribute">type</span>: git</span><br><span class="line">    <span class="attribute">repository</span>:</span><br><span class="line">       <span class="attribute">oschina</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:xxx/xxx.git,branchName</span><br><span class="line">       <span class="attribute">coding</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:xxx/xxx.git,branchName</span><br></pre></td></tr></table></figure></p>
-<p>提交备份：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> b</span><br></pre></td></tr></table></figure></p>
-<p>如果想在其他机器上写博客，只需将仓库克隆，切换到站点目录下运行：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="hexo-g报错-Hexo-3-2-0版本-：Cannot-read-property-‘updated’-of-undefined"><a href="#hexo-g报错-Hexo-3-2-0版本-：Cannot-read-property-‘updated’-of-undefined" class="headerlink" title="hexo g报错(Hexo: 3.2.0版本)：Cannot read property ‘updated’ of undefined"></a>hexo g报错(Hexo: 3.2.0版本)：Cannot read property ‘updated’ of undefined</h2><p>hexo升级为3.2.0版本之后，hexo g报错：<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">FATAL ejs:7</span><br><span class="line">    5|   <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> encodeURI(feed_url) </span>%&gt;<span class="xml"><span class="tag"><span class="value">"</span> <span class="attribute">rel</span>=<span class="value">"self"</span>/&gt;</span></span><br><span class="line">    6|   <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"</span></span></span>&lt;%-<span class="ruby"> encodeURI(url) </span>%&gt;<span class="xml"><span class="tag"><span class="value">"</span>/&gt;</span></span><br><span class="line"> &gt;&gt; 7|   <span class="tag">&lt;<span class="title">updated</span>&gt;</span></span>&lt;%=<span class="ruby"> posts.first().updated.toISOString() </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">updated</span>&gt;</span></span><br><span class="line">    8|   <span class="tag">&lt;<span class="title">id</span>&gt;</span></span>&lt;%-<span class="ruby"> url </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">id</span>&gt;</span></span><br><span class="line">    9|   </span>&lt;%<span class="ruby"> <span class="keyword">if</span> (config.author)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">    10|   <span class="tag">&lt;<span class="title">author</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Cannot read property 'updated' of undefined</span></span><br></pre></td></tr></table></figure></p>
-<p>打开站点根目录文件：package.json，修改”dependencies”中hexo版本为：3.1.1，删除node_modules文件夹，重新运行：npm install<br>修改前：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"hexo-site"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"0.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">private</span>": <span class="value"><span class="literal">true</span></span>,</span><br><span class="line">  "<span class="attribute">hexo</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">version</span>": <span class="value"><span class="string">"3.2.0"</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">dependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">hexo</span>": <span class="value"><span class="string">"^3.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-deployer-git</span>": <span class="value"><span class="string">"0.0.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-archive</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-category</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-feed</span>": <span class="value"><span class="string">"~1.0.3"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-index</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-search</span>": <span class="value"><span class="string">"^1.0.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-sitemap</span>": <span class="value"><span class="string">"~1.0.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-tag</span>": <span class="value"><span class="string">"^0.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-git-backup</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-ejs</span>": <span class="value"><span class="string">"^0.1.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-marked</span>": <span class="value"><span class="string">"^0.2.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-stylus</span>": <span class="value"><span class="string">"^0.2.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-server</span>": <span class="value"><span class="string">"^0.1.3"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
-<p>修改后：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"hexo-site"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"0.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">private</span>": <span class="value"><span class="literal">true</span></span>,</span><br><span class="line">  "<span class="attribute">hexo</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">version</span>": <span class="value"><span class="string">"3.2.0"</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">dependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">hexo</span>": <span class="value"><span class="string">"3.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-deployer-git</span>": <span class="value"><span class="string">"0.0.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-archive</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-category</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-feed</span>": <span class="value"><span class="string">"~1.0.3"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-index</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-search</span>": <span class="value"><span class="string">"^1.0.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-sitemap</span>": <span class="value"><span class="string">"~1.0.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-generator-tag</span>": <span class="value"><span class="string">"^0.1.1"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-git-backup</span>": <span class="value"><span class="string">"^0.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-ejs</span>": <span class="value"><span class="string">"^0.1.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-marked</span>": <span class="value"><span class="string">"^0.2.4"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-renderer-stylus</span>": <span class="value"><span class="string">"^0.2.0"</span></span>,</span><br><span class="line">    "<span class="attribute">hexo-server</span>": <span class="value"><span class="string">"^0.1.3"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>android源码的获取和编译教程，Google官方有详细的教程，建议直接看官方教程，链接如下：<br><a href="https://source.android.com/source/requirements.html" target="_blank" rel="external">https://source.android.com/source/requirements.html</a></p>
+<h3 id="编译环境要求"><a href="#编译环境要求" class="headerlink" title="编译环境要求"></a>编译环境要求</h3><p>先介绍下我的电脑基础环境：<br>1.硬件：MacBook Pro<br>2.系统版本：OS X EI Capitan 10.11.6</p>
+<h4 id="一、系统版本要求"><a href="#一、系统版本要求" class="headerlink" title="一、系统版本要求"></a>一、系统版本要求</h4><p>以下是官方给出的各个android版本建议对应的系统版本：</p>
+<h5 id="GNU-Linux"><a href="#GNU-Linux" class="headerlink" title="GNU/Linux"></a>GNU/Linux</h5><p>Android 6.0 (Marshmallow) - AOSP master: Ubuntu 14.04 (Trusty)<br>Android 2.3.x (Gingerbread) - Android 5.x (Lollipop): Ubuntu 12.04 (Precise)<br>Android 1.5 (Cupcake) - Android 2.2.x (Froyo): Ubuntu 10.04 (Lucid)  </p>
+<h5 id="Mac-OS-Intel-x86"><a href="#Mac-OS-Intel-x86" class="headerlink" title="Mac OS (Intel/x86)"></a>Mac OS (Intel/x86)</h5><p>Android 6.0 (Marshmallow) - AOSP master: Mac OS v10.10 (Yosemite) or later with Xcode 4.5.2 and Command Line Tools<br>Android 5.x (Lollipop): Mac OS v10.8 (Mountain Lion) with Xcode 4.5.2 and Command Line Tools<br>Android 4.1.x-4.3.x (Jelly Bean) - Android 4.4.x (KitKat): Mac OS v10.6 (Snow Leopard) or Mac OS X v10.7 (Lion) and Xcode 4.2 (Apple’s Developer Tools)<br>Android 1.5 (Cupcake) - Android 4.0.x (Ice Cream Sandwich): Mac OS v10.5 (Leopard) or Mac OS X v10.6 (Snow Leopard) and the Mac OS X v10.5 SDK<br><a id="more"></a>  </p>
+<h4 id="二、JDK版本要求"><a href="#二、JDK版本要求" class="headerlink" title="二、JDK版本要求"></a>二、JDK版本要求</h4><p>The master branch of Android in AOSP: Ubuntu - OpenJDK 8, Mac OS - jdk 8u45 or newer<br>Android 5.x (Lollipop) - Android 6.0 (Marshmallow): Ubuntu - OpenJDK 7, Mac OS - jdk-7u71-macosx-x64.dmg<br>Android 2.3.x (Gingerbread) - Android 4.4.x (KitKat): Ubuntu - Java JDK 6, Mac OS - Java JDK 6<br>Android 1.5 (Cupcake) - Android 2.2.x (Froyo): Ubuntu - Java JDK 5  </p>
+<h3 id="编译环境搭建"><a href="#编译环境搭建" class="headerlink" title="编译环境搭建"></a>编译环境搭建</h3><p>（以下内容记录的是在Mac上的搭建过程，其余系统请移步<a href="https://source.android.com/source/initializing.html" target="_blank" rel="external">android官方文档</a>）</p>
+<h4 id="1-建立一个区分大小的分区-OS-X中默认分区文件系统是不区分大小写的"><a href="#1-建立一个区分大小的分区-OS-X中默认分区文件系统是不区分大小写的" class="headerlink" title="1.建立一个区分大小的分区(OS X中默认分区文件系统是不区分大小写的)"></a>1.建立一个区分大小的分区(OS X中默认分区文件系统是不区分大小写的)</h4><p>直接在终端运行以下命令，即可建立一块大小为40g的分区，如果要创建其他的大小的分区，将命令中的40改为对应的数字即可。个人实测建议，这个分区尽量大一些，以我自己为例，我下载的是android－6.0 nexus5分支的源码，完成同步并编译之后大概占用了70G<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># hdiutil <span class="operator"><span class="keyword">create</span> -<span class="keyword">type</span> <span class="keyword">SPARSE</span> -fs <span class="string">'Case-sensitive Journaled HFS+'</span> -<span class="keyword">size</span> <span class="number">40</span><span class="keyword">g</span> ~/android.dmg</span></span><br></pre></td></tr></table></figure></p>
+<p>上述命令将会生成一个以.dmg或.dmg.sparseimage为后缀的文件  </p>
+<p>如果已经创建好了这个分区，想再去更改它的大小，可以通过以下命令实现<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># hdiutil resize -<span class="keyword">size</span> &lt;<span class="keyword">new</span>-<span class="keyword">size</span>-you-want&gt;g ~<span class="regexp">/android.dmg.sparseimage</span></span><br></pre></td></tr></table></figure></p>
+<p>2.将创建好的这个镜像挂载到系统中<br>在文件~/.bash_profile中配置以下内容。（如果该文件不存在，可通过touch命令先生成，然后再将内容添加）<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 挂载镜像文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mountAndroid</span> </span>&#123; hdiutil attach ~/android.dmg -mountpoint /Volumes/android; &#125;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 卸载镜像文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unmountAndroid</span><span class="params">()</span> </span>&#123; hdiutil detach /Volumes/android; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>(如果镜像文件是以.dmg.sparseimage为后缀，则将命令中的~/android.dmg 替换为 ~/android.dmg.sparseimage）</p>
+<p>3.下载并安装jdk<br>上<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">oracle官网</a>，对照前面所提的不同的android版本所需jdk下载安装即可<br>4.在appstore中安装Xcode<br>5.安装<a href="https://www.macports.org/install.php" target="_blank" rel="external">MacPorts</a><br>确保path环境变量中/opt/local/bin在/usr/bin之前，否则添加以下内容到～/.bash_profile<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/opt/local/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>6.通过MacPorts安装make, git, 和 GPG等<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="type">POSIXLY_CORRECT</span>=<span class="number">1</span> sudo <span class="foreign"><span class="keyword">port</span> install gmake libsdl git gnupg</span></span><br></pre></td></tr></table></figure></p>
+<p>7、在~/.bash_profile中配置文件限制<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># <span class="operator"><span class="keyword">set</span> the <span class="built_in">number</span> <span class="keyword">of</span> <span class="keyword">open</span> files <span class="keyword">to</span> be <span class="number">1024</span></span><br><span class="line">ulimit -S -<span class="keyword">n</span> <span class="number">1024</span></span></span><br></pre></td></tr></table></figure></p>
+<p>8、配置缓存<br>在源码的根目录下，打开终端输入以下命令，即可配置编译运行缓存，建议大小为50～100G<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">export</span> USE_CCACHE=<span class="number">1</span></span><br><span class="line">$ <span class="keyword">export</span> CCACHE_DIR=/&lt;path_of_your_choice&gt;/.ccache</span><br><span class="line">$ prebuilts/misc/darwin-x86/ccache/ccache -M <span class="number">50</span>G</span><br></pre></td></tr></table></figure></p>
+<p>在.bashrc中加入内容：export USE_CCACHE=1</p>
+<h3 id="四、下载源码"><a href="#四、下载源码" class="headerlink" title="四、下载源码"></a>四、下载源码</h3><p><strong>1.</strong>在home根目录下建立一个bin文件夹并添加到环境变量中：<br>$ mkdir ~/bin<br>$ PATH=~/bin:$PATH  </p>
+<p><strong>2.</strong>下载repo工具<br>$ curl <a href="https://storage.googleapis.com/git-repo-downloads/repo" target="_blank" rel="external">https://storage.googleapis.com/git-repo-downloads/repo</a> &gt; ~/bin/repo<br>$ chmod a+x ~/bin/repo  </p>
+<p><strong>3.</strong>在上面创建的区分大小写的镜像中建立一个编译根目录(名字随意取)：WORKING_DIRECTORY<br>$ mkdir WORKING_DIRECTORY<br>$ cd WORKING_DIRECTORY  </p>
+<p><strong>4.</strong>配置git用户名和账号邮箱信息<br>$ git config –global user.name “Your Name”<br>$ git config –global user.email   “you@example.com”<br><strong>5.</strong>init源码分支<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>repo init -u <span class="symbol">https:</span>/<span class="regexp">/android.googlesource.com/platform</span><span class="regexp">/manifest</span></span><br></pre></td></tr></table></figure></p>
+<p>如果提示无法连接到 gerrit.googlesource.com，可以将源换成清华的，编辑 ~/bin/repo，把 REPO_URL 一行替换成下面的：<br>REPO_URL = ‘<a href="https://gerrit-google.tuna.tsinghua.edu.cn/git-repo" target="_blank" rel="external">https://gerrit-google.tuna.tsinghua.edu.cn/git-repo</a>‘<br>更加详细操作可<a href="https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/" target="_blank" rel="external">点击</a>该链接进行查看<br>如果想clone具体的分支，可加上-b参数，我想编译的是nexus 5，android 6.0，点击这个[链接]可查看具体的分支名,可以看到我想要的具体分支名为：android-6.0.1_r60<br>所以命令为：<br>$ repo init -u <a href="https://android.googlesource.com/platform/manifest" target="_blank" rel="external">https://android.googlesource.com/platform/manifest</a> -b android-6.0.1_r60  </p>
+<p><strong>6.</strong>开始同步<br>在源码根目录下打开终端执行：repo sync，即可开始代码同步过程，经历的将是漫长的等待，毕竟即使个G的代码。。。</p>
+<h3 id="四、编译源码"><a href="#四、编译源码" class="headerlink" title="四、编译源码"></a>四、编译源码</h3><p><strong>1.</strong>make clobber：清理out目录，如果每次都想重新编译的话，可执行该命令清除上次编译生成的OUT目录  </p>
+<p>2.source build/envsetup.sh：初始化编译环境  </p>
+<p>3.lunch  </p>
+<p>4.输入对应target的数字（因为我要编译的是userdebug版本 19. aosp_hammerhead-userdebug所以直接输入19即可）  </p>
+<p>5.make -j4:开始编译，至于是4个线程同时编译还是8个或者16个自行根据自己电脑的配置来决定  </p>
+<h3 id="五、烧录镜像到机器中"><a href="#五、烧录镜像到机器中" class="headerlink" title="五、烧录镜像到机器中"></a>五、烧录镜像到机器中</h3><p>如果编译一切顺利，就可以实行最后一步了，就是我们常说的刷机<br>cd $OUT：切换到out目录<br>手机重启进入bootloader模式<br>fastboot flashall -w：执行该命令开始刷机  </p>
+<h3 id="六、纪录遇到的坑"><a href="#六、纪录遇到的坑" class="headerlink" title="六、纪录遇到的坑"></a>六、纪录遇到的坑</h3><p>1.Xcode版本问题：Can not find SDK 10.6 at /Developer/SDKs/MacOSX10.6.sdk<br>这个问题是由于我们系统的版本比较高，所以sdk版本也比较高了，此时需要更改sdk配置</p>
+<p>cd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs<br>ls //查看sdk版本(我的版本为 MacOSX10.11.sdk)<br>然后编辑build/core/combo/mac_version.mk中的mac_sdk_versions_supported所在的行添加10.11  </p>
 
       
     </div>
@@ -404,7 +410,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/AOSP/" rel="tag">#AOSP</a>
           
         </div>
       
@@ -413,16 +419,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/02/0001_makrdown/" rel="next" title="MarkDown 基础知识学习">
-                <i class="fa fa-chevron-left"></i> MarkDown 基础知识学习
+              <a href="/2016/06/23/0008-adb-shell-dumpsys/" rel="next" title="dumpsys命令">
+                <i class="fa fa-chevron-left"></i> dumpsys命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/18/0003_gitlab_use/" rel="prev" title="Gitlab 使用">
-                Gitlab 使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/27/0010-alian_wakeup/" rel="prev" title="Android Alarm、WakeLock机制与对齐唤醒">
+                Android Alarm、WakeLock机制与对齐唤醒 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -475,8 +481,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/08/20/0002_hexo/"
-           data-title="Hexo" data-url="http://codingtrip.com/2015/08/20/0002_hexo/">
+      <div class="ds-thread" data-thread-key="2016/08/26/0009-mac-aosp/"
+           data-title="在Mac OS中获取和编译android源码(AOSP)" data-url="http://codingtrip.com/2016/08/26/0009-mac-aosp/">
       </div>
     
   </div>
@@ -616,7 +622,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo备份"><span class="nav-number">1.</span> <span class="nav-text">Hexo备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-g报错-Hexo-3-2-0版本-：Cannot-read-property-‘updated’-of-undefined"><span class="nav-number">2.</span> <span class="nav-text">hexo g报错(Hexo: 3.2.0版本)：Cannot read property ‘updated’ of undefined</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#编译环境要求"><span class="nav-number">1.</span> <span class="nav-text">编译环境要求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、系统版本要求"><span class="nav-number">1.1.</span> <span class="nav-text">一、系统版本要求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#GNU-Linux"><span class="nav-number">1.1.1.</span> <span class="nav-text">GNU/Linux</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Mac-OS-Intel-x86"><span class="nav-number">1.1.2.</span> <span class="nav-text">Mac OS (Intel/x86)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、JDK版本要求"><span class="nav-number">1.2.</span> <span class="nav-text">二、JDK版本要求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译环境搭建"><span class="nav-number">2.</span> <span class="nav-text">编译环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-建立一个区分大小的分区-OS-X中默认分区文件系统是不区分大小写的"><span class="nav-number">2.1.</span> <span class="nav-text">1.建立一个区分大小的分区(OS X中默认分区文件系统是不区分大小写的)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、下载源码"><span class="nav-number">3.</span> <span class="nav-text">四、下载源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、编译源码"><span class="nav-number">4.</span> <span class="nav-text">四、编译源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、烧录镜像到机器中"><span class="nav-number">5.</span> <span class="nav-text">五、烧录镜像到机器中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、纪录遇到的坑"><span class="nav-number">6.</span> <span class="nav-text">六、纪录遇到的坑</span></a></li></ol></div>
             
           </div>
         </section>
