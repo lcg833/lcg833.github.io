@@ -298,7 +298,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/07/07/0011_broadcast/" itemprop="url">
+                <a class="post-title-link" href="/2017/07/07/0011-broadcast/" itemprop="url">
                   Android Broadcast广播机制
                 </a>
               
@@ -323,8 +323,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/07/07/0011_broadcast/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/07/0011_broadcast/" itemprop="commentsCount"></span>
+                <a href="/2017/07/07/0011-broadcast/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/07/0011-broadcast/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -333,15 +333,6 @@
           
 
           
-          
-             <span id="/2017/07/07/0011_broadcast/" class="leancloud_visitors" data-flag-title="Android Broadcast广播机制">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -372,7 +363,7 @@
 <h1 id="二、广播的注册流程"><a href="#二、广播的注册流程" class="headerlink" title="二、广播的注册流程"></a>二、广播的注册流程</h1><h2 id="2-1-动态注册"><a href="#2-1-动态注册" class="headerlink" title="2.1 动态注册"></a>2.1 动态注册</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义BroadcastReceiver</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomReceiver</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">BroadcastReceiver</span> &#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    public void onReceive(<span class="type">Context</span> context, <span class="type">Intent</span> intent) &#123;</span><br><span class="line">        <span class="keyword">if</span> (intent != <span class="literal">null</span> &amp;&amp; <span class="type">TextUtils</span>.equals(intent.getAction(), <span class="string">"CUSTOM_ACTION"</span>)) &#123;</span><br><span class="line">            <span class="comment">//do some thing</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//注册</span></span><br><span class="line"><span class="type">IntentFilter</span> filter = <span class="keyword">new</span> <span class="type">IntentFilter</span>(<span class="string">"CUSTOM_ACTION"</span>);</span><br><span class="line"><span class="type">CustomReceiver</span> receiver = <span class="keyword">new</span> <span class="type">CustomReceiver</span>();</span><br><span class="line"><span class="type">Context</span>.registerReceiver(receiver, filter);</span><br><span class="line"></span><br><span class="line"><span class="comment">//取消注册</span></span><br><span class="line"><span class="type">Context</span>.unregisterReceiver(receiver);</span><br></pre></td></tr></table></figure>
 <p>以上代码是一个动态注册的简单示例，其中关键在于Context里是如何实现注册的。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/07/07/0011_broadcast/#more" rel="contents">
+            <a class="btn" href="/2017/07/07/0011-broadcast/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -458,15 +449,6 @@
           
 
           
-          
-             <span id="/2017/03/27/0010-alian_wakeup/" class="leancloud_visitors" data-flag-title="Android Alarm、WakeLock机制与对齐唤醒">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -578,15 +560,6 @@
           
 
           
-          
-             <span id="/2016/08/26/0009-mac-aosp/" class="leancloud_visitors" data-flag-title="在Mac OS中获取和编译android源码(AOSP)">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -714,15 +687,6 @@
 
           
           
-             <span id="/2016/06/23/0008-adb-shell-dumpsys/" class="leancloud_visitors" data-flag-title="dumpsys命令">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
         </div>
@@ -847,15 +811,6 @@
 
           
           
-             <span id="/2016/06/23/0007-adb-shell-am/" class="leancloud_visitors" data-flag-title="am命令">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
         </div>
@@ -977,15 +932,6 @@
           
 
           
-          
-             <span id="/2016/06/22/0006-adb-shell-svc/" class="leancloud_visitors" data-flag-title="svc命令">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -1109,15 +1055,6 @@
           
 
           
-          
-             <span id="/2016/05/24/0005-adb-shell-monkey/" class="leancloud_visitors" data-flag-title="monkey命令">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -1244,15 +1181,6 @@
 
           
           
-             <span id="/2016/05/19/0004_unit_test/" class="leancloud_visitors" data-flag-title="单元测试实践-android">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
         </div>
@@ -1374,15 +1302,6 @@
           
 
           
-          
-             <span id="/2016/05/18/0003_gitlab_use/" class="leancloud_visitors" data-flag-title="Gitlab 使用">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -1508,15 +1427,6 @@
           
 
           
-          
-             <span id="/2015/08/20/0002_hexo/" class="leancloud_visitors" data-flag-title="Hexo">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
           
 
           
@@ -1988,105 +1898,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("4dOx59DJqKNoccbcGIuztG09-gzGzoHsz", "FPxLkx1NjkayLNUrG6x1eCps");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 

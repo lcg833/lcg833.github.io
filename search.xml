@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Android Broadcast广播机制]]></title>
-      <url>http://codingtrip.com/2017/07/07/0011_broadcast/</url>
+      <url>http://codingtrip.com/2017/07/07/0011-broadcast/</url>
       <content type="html"><![CDATA[<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>广播(Broadcast)是android中一种用于进程/线程间通信机制，广播分为广播发送和广播接收两个过程。  </p>
 <p>其中要实现广播的接收，是通过注册广播接收者（BroadcastReceiver四大组件之一）来实现的，注册方式分为两种：<strong>动态注册</strong> 和 <strong>静态注册</strong>。</p>
 <ol>
